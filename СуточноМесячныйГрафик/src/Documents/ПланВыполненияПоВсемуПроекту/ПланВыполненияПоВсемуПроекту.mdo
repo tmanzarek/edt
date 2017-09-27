@@ -1,27 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cee90d1a-10a8-4c7a-a801-f68f501dc6f0">
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="58f28ec4-2ce3-4d50-b7f0-1ddd0c68ebc4">
   <producedTypes>
-    <objectType typeId="4c2fc5e6-797e-47c7-a187-c07e1a9bb89b" valueTypeId="e07f2e88-b6eb-4d96-b559-a93b0e2d0b0e">
+    <objectType typeId="d5437216-cd96-455a-bd83-0e9126afcf88" valueTypeId="934767e3-ab93-437f-a3c1-01f3485fb718">
     </objectType>
-    <refType typeId="32a7013b-be4f-4284-9fec-32f60ecd51b7" valueTypeId="1540af64-f544-477f-8686-e0d6cc04063b">
+    <refType typeId="4f3a0fc8-7a68-447d-8072-c03bd02715ad" valueTypeId="b10bf2ad-f750-40b0-b04b-e1697fc370ed">
       <emptyRef/>
     </refType>
-    <selectionType typeId="af6eb62c-3e4c-4370-8ed2-1400c4f54a84" valueTypeId="715c8479-be93-400a-93ed-828abe5f167e">
+    <selectionType typeId="9c0a9f34-8ffb-4e07-8dd8-00556ccaa465" valueTypeId="52429b1b-b59c-462f-ad4d-87868868ee00">
     </selectionType>
-    <listType typeId="23bcdad6-0fb9-4dae-a7bb-1db63c35cab9" valueTypeId="aefc44f6-1a8b-485e-a823-6bb659952f66">
+    <listType typeId="333359d0-c02b-4815-afb7-86243c695790" valueTypeId="47f54be3-373b-4735-b775-1a582a42fd85">
     </listType>
-    <managerType typeId="1c4c1bb0-c149-482a-b345-9e8d03dce76a" valueTypeId="8d70662c-73ef-4b71-a5bc-3af4553ebd5e">
+    <managerType typeId="f35e5740-8e5c-4246-83b7-3a46eb8cc419" valueTypeId="6a6573b3-3c46-4362-b037-f64f3e1b3663">
     </managerType>
   </producedTypes>
-  <name>ФактВыполнения</name>
+  <name>ПланВыполненияПоВсемуПроекту</name>
   <synonym>
     <key>ru</key>
-    <value>Суточный факт выполнения</value>
+    <value>План выполнения по проекту</value>
   </synonym>
   <comment></comment>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Document.ФактВыполнения.StandardAttribute.Number</inputByString>
+  <inputByString>Document.ПланВыполненияПоВсемуПроекту.StandardAttribute.Number</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <name>Posted</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>Ref</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>DeletionMark</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>Date</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>Number</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
   <createOnInput>Use</createOnInput>
   <dataLockControlMode>Managed</dataLockControlMode>
   <fullTextSearch>Use</fullTextSearch>
@@ -30,10 +76,11 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <defaultObjectForm>Document.ФактВыполнения.Form.ФормаДокумента</defaultObjectForm>
+  <defaultObjectForm>Document.ПланВыполненияПоВсемуПроекту.Form.ФормаДокумента</defaultObjectForm>
   <realTimePosting>Deny</realTimePosting>
-  <registerRecords>AccumulationRegister.СуточныйГрафик</registerRecords>
-  <forms uuid="10364c37-6bd7-4ae8-b251-e1fd91018fb1">
+  <registerRecords>AccumulationRegister.ПланПоВсемуПроекту</registerRecords>
+  <registerRecords>InformationRegister.ДатаИзмененияПланаПоПроекту</registerRecords>
+  <forms uuid="12bf7bca-0135-436e-9601-bdeee64aba49">
     <name>ФормаДокумента</name>
     <synonym>
       <key>ru</key>
@@ -43,16 +90,25 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <tabularSections uuid="b545087f-b5df-4bca-bca9-ceab1a97786a">
+  <tabularSections uuid="07db9166-1190-499b-bad3-efa1f1c9d092">
     <producedTypes>
-      <objectType typeId="d30e76bd-03fb-4e88-8e90-34cdab4474ca" valueTypeId="4b0550bd-8530-471b-9196-3203fce4a6b6">
+      <objectType typeId="8293a291-b48b-4511-9aa6-9515262e0ff4" valueTypeId="ad852732-0bb4-44da-9032-5614c0411500">
       </objectType>
-      <rowType typeId="16c82c84-af5b-4cc3-9f83-fd723dd6d360" valueTypeId="d40048a1-f2f3-4767-9659-dae3460f9172">
+      <rowType typeId="f388476c-d412-46f0-905b-c34948b462ae" valueTypeId="5fda460d-e587-4035-95b0-672ae09b53fb">
       </rowType>
     </producedTypes>
     <name>Выполнение</name>
     <comment></comment>
-    <attributes uuid="06109014-4f39-45fb-bf1d-154dd1470d2a">
+    <standardAttributes>
+      <name>LineNumber</name>
+      <comment></comment>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="55eddb45-d906-44af-8d0a-f73e20fb686a">
       <name>Подрядчик</name>
       <synonym>
         <key>ru</key>
@@ -67,7 +123,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="631e5f6e-84f4-48ea-8556-369ddc2e4825">
+    <attributes uuid="f08e0c6e-d08f-491e-89f0-21a978495a3f">
       <name>Титул</name>
       <synonym>
         <key>ru</key>
@@ -81,7 +137,7 @@
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
-    <attributes uuid="4ccc250c-3792-413c-bd6e-cb6dd7b32aa6">
+    <attributes uuid="ea9ae2ab-0540-4b35-8686-618c698eb9c5">
       <name>ШифрПроекта</name>
       <synonym>
         <key>ru</key>
@@ -96,7 +152,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="a857c835-24ce-469c-9f36-911a16292d33">
+    <attributes uuid="1ebea30b-ff7a-4f97-843e-80d8813bb79d">
       <name>НомерЛокальнойСметы</name>
       <synonym>
         <key>ru</key>
@@ -111,7 +167,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="8aa77aee-c00d-4602-87a4-024c65f4f56b">
+    <attributes uuid="6d166aba-8c92-4ac7-8c9d-999ba54df561">
       <name>НаименованиеСМР</name>
       <synonym>
         <key>ru</key>
@@ -126,7 +182,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="5e35bf60-8157-4448-8bfc-ece4804fa1d6">
+    <attributes uuid="e45bd7d3-e775-45c1-beeb-99b01e2542d2">
       <name>ЕдиницаИзмерения</name>
       <synonym>
         <key>ru</key>
@@ -141,11 +197,11 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="c067b6df-e7be-4a5f-8934-e0d291bf1eaa">
-      <name>СуточныйОбъём</name>
+    <attributes uuid="75102c7a-988e-478c-b79b-e794a625f449">
+      <name>Объём</name>
       <synonym>
         <key>ru</key>
-        <value>Суточный объём</value>
+        <value>Объём</value>
       </synonym>
       <comment></comment>
       <type>
@@ -153,9 +209,9 @@
         <numberQualifiers>
           <precision>15</precision>
           <scale>3</scale>
-          <nonNegative>true</nonNegative>
         </numberQualifiers>
       </type>
+      <markNegatives>true</markNegatives>
       <mask></mask>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

@@ -1,66 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b14a9dbc-fa38-46de-9412-27195b8a2f6a">
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4c0d81f9-2fb6-4baa-9bd6-cbba2b74a413">
   <producedTypes>
-    <selectionType typeId="83f78886-0e6a-4c92-a032-1ce90d1dace4" valueTypeId="6a94e00c-108f-431b-b69a-269dd5ac4d7a">
+    <selectionType typeId="4737a281-36fe-48dd-a4f2-4378126538d9" valueTypeId="23e60249-b36f-44e8-aec5-719b36c3eeb2">
     </selectionType>
-    <listType typeId="715eb244-b636-4746-99b7-abaf0e52bb8c" valueTypeId="67c2770a-6cda-4f54-9a70-5f072e2d5ce0">
+    <listType typeId="3d71d0d1-2757-4e65-b362-b4c033e2a24b" valueTypeId="f713d64c-b0e8-4c2e-bcd7-60c19f57a4ae">
     </listType>
-    <managerType typeId="f3aff59b-039d-48a0-be2d-40f532deca61" valueTypeId="5c0823b7-44c4-490f-9846-20b7738faccb">
+    <managerType typeId="cd52bc86-c23e-4c47-adbb-31c3c7b4edf9" valueTypeId="630c1308-cff2-4651-92b4-3a06514a674b">
     </managerType>
-    <recordSetType typeId="9680e819-7aca-46c2-b967-5c4263ae0938" valueTypeId="baa23547-956f-41c1-852b-35d905ffc50c">
+    <recordSetType typeId="a94e3fca-11b7-48a1-a11e-cc0f3d78693a" valueTypeId="8a468ae4-8791-4c0d-a14d-1c4cc44c1482">
     </recordSetType>
-    <recordKeyType typeId="2876220b-e6a5-4456-8aa0-22b0d5bc9304" valueTypeId="4da6820f-ffb3-4c29-a284-74e8c9bbad61">
+    <recordKeyType typeId="e25adeed-9ffb-4162-aa80-3d02fc75427a" valueTypeId="06a8d301-67a9-4700-a454-cf40736251a4">
     </recordKeyType>
-    <recordType typeId="7883fa4c-e95b-4fc5-8a6b-0b4fe780f981" valueTypeId="0c6f0429-3a6a-4e69-979a-98375afcfe37">
+    <recordType typeId="ee046ffc-c224-499d-ac03-b8de79dd0e41" valueTypeId="f479ea76-aa7a-4d84-9669-511ad951623b">
     </recordType>
+    <recordManagerType typeId="dfed23e1-5ecb-49ac-8b7c-1c7725490ab4" valueTypeId="b77cc8f7-b2eb-476e-b07e-fdd298baea82">
+    </recordManagerType>
   </producedTypes>
-  <name>СуточныйГрафик</name>
+  <name>ДатаИзмененияПланаПоПроекту</name>
   <synonym>
     <key>ru</key>
-    <value>Суточный график</value>
+    <value>Дата изменения плана по проекту</value>
   </synonym>
   <comment></comment>
-  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <name>Active</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>LineNumber</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>Recorder</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>Period</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
   <dataLockControlMode>Managed</dataLockControlMode>
-  <resources uuid="96aa7795-2b0a-4a6d-8a0e-9c07434be55c">
-    <name>ПланОбъёмВыполнения</name>
+  <enableTotalsSliceFirst>true</enableTotalsSliceFirst>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="8dc6d993-4e06-4471-b05d-d34283c59f03">
+    <name>ДатаИзма</name>
     <synonym>
       <key>ru</key>
-      <value>Плановый объём выполнения</value>
+      <value>Дата изма</value>
     </synonym>
     <comment></comment>
     <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>15</precision>
-        <scale>3</scale>
-      </numberQualifiers>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
     </type>
     <mask></mask>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </resources>
-  <resources uuid="141b89de-adb0-4338-881e-fa63b40e50cb">
-    <name>ФактОбъёмВыполнения</name>
-    <synonym>
-      <key>ru</key>
-      <value>Факт объём выполнения</value>
-    </synonym>
-    <comment></comment>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>15</precision>
-        <scale>3</scale>
-      </numberQualifiers>
-    </type>
-    <mask></mask>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-  </resources>
-  <dimensions uuid="b59d7a47-4881-436c-8edb-fd096440b94d">
+  <dimensions uuid="228439ed-0425-490d-a4a1-939565f221b5">
     <name>Подрядчик</name>
     <synonym>
       <key>ru</key>
@@ -76,9 +99,9 @@
     <denyIncompleteValues>true</denyIncompleteValues>
     <indexing>Index</indexing>
     <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
-  <dimensions uuid="cd8136fd-d7ce-414b-b09c-c864f102cc70">
+  <dimensions uuid="abb8860d-3bb2-435e-b2e9-2d1505610c7f">
     <name>Титул</name>
     <synonym>
       <key>ru</key>
@@ -92,9 +115,9 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <denyIncompleteValues>true</denyIncompleteValues>
-    <useInTotals>true</useInTotals>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
-  <dimensions uuid="29a0be4b-550f-46a2-be96-771ea53296f7">
+  <dimensions uuid="b1a21c4c-149f-47a1-98d0-7222dab8a9fb">
     <name>ШифрПроекта</name>
     <synonym>
       <key>ru</key>
@@ -111,9 +134,9 @@
     <denyIncompleteValues>true</denyIncompleteValues>
     <indexing>Index</indexing>
     <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
-  <dimensions uuid="f6dff2b9-d560-419d-ab2c-3271c5ad83b6">
+  <dimensions uuid="f1bcbf83-3e5b-4f40-8ba0-d2d1b8abbb66">
     <name>ЛокальнаяСмета</name>
     <synonym>
       <key>ru</key>
@@ -130,9 +153,9 @@
     <denyIncompleteValues>true</denyIncompleteValues>
     <indexing>Index</indexing>
     <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
-  <dimensions uuid="08cec7a9-d35a-40e7-882b-7ecbe2b84e2d">
+  <dimensions uuid="229ceaf4-a0d1-4059-a194-b83406fef0ad">
     <name>СМР</name>
     <synonym>
       <key>ru</key>
@@ -149,9 +172,9 @@
     <denyIncompleteValues>true</denyIncompleteValues>
     <indexing>Index</indexing>
     <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
-  <dimensions uuid="3c12b349-c388-4753-bb85-2b7bd2b2e3fa">
+  <dimensions uuid="b46b7be2-2e80-4ca0-baf1-58f849e81e4b">
     <name>ЕдИзм</name>
     <synonym>
       <key>ru</key>
@@ -165,28 +188,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
-  <dimensions uuid="02343e60-4d5c-4752-9685-587712f3df33">
-    <name>ДатаВыполнения</name>
-    <synonym>
-      <key>ru</key>
-      <value>Дата выполнения</value>
-    </synonym>
-    <comment></comment>
-    <type>
-      <types>Date</types>
-      <dateQualifiers>
-        <dateFractions>Date</dateFractions>
-      </dateQualifiers>
-    </type>
-    <mask></mask>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <denyIncompleteValues>true</denyIncompleteValues>
-    <indexing>Index</indexing>
-    <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
-  </dimensions>
-</mdclass:AccumulationRegister>
+</mdclass:InformationRegister>

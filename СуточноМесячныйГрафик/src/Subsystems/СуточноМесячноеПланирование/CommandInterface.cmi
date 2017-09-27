@@ -18,6 +18,10 @@
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
+      <command>Catalog.СправочникТитулов.StandardCommand.OpenList</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
       <command>0:992611d2-423d-46e4-8757-3c28f2a39f2c</command>
       <visible/>
     </visibilityFragments>
@@ -53,7 +57,7 @@
       <commands>Catalog.ШифрыПроекта.StandardCommand.OpenList</commands>
       <commands>Catalog.ЛокальныеСметы.StandardCommand.OpenList</commands>
       <commands>Catalog.СправочникСМР.StandardCommand.OpenList</commands>
-      <commands>0:c69cac29-c9d4-4687-858e-f35c542374fe</commands>
+      <commands>Catalog.СправочникТитулов.StandardCommand.OpenList</commands>
       <commands>0:992611d2-423d-46e4-8757-3c28f2a39f2c</commands>
       <commands>0:d1f4493b-fc80-45f9-af6b-fb496553193e</commands>
       <commands>0:f153dc8c-f526-4d36-81bc-3e71c17ac251</commands>

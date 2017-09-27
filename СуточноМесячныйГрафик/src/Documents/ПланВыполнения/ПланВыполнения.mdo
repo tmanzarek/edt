@@ -39,6 +39,7 @@
       <key>ru</key>
       <value>Форма документа</value>
     </synonym>
+    <comment></comment>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
@@ -72,9 +73,13 @@
         <key>ru</key>
         <value>Титул</value>
       </synonym>
+      <comment></comment>
       <type>
         <types>CatalogRef.СправочникТитулов</types>
       </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="fcc1d790-fe8b-4ff1-a94f-00a34e623904">
       <name>ШифрПроекта</name>
