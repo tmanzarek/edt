@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e8ac060c-856b-4867-8eae-3228cb64f0a1">
+  <name>СуточноМесячноеПланирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Суточно-месячное планирование</value>
+  </synonym>
+  <comment></comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>Catalog.СправочникПодрядчиков</content>
+  <content>Catalog.ТипСМР</content>
+  <content>Catalog.ВидСМР</content>
+  <content>Catalog.ЕдИзм</content>
+  <content>Catalog.СправочникСМР</content>
+  <content>Catalog.РуководительРабот</content>
+  <content>Catalog.СправочникТитулов</content>
+  <content>Catalog.ШифрыПроекта</content>
+  <content>Catalog.ЛокальныеСметы</content>
+  <content>Document.ФактВыполнения</content>
+  <content>Document.ПланВыполнения</content>
+  <content>Report.Выполнение</content>
+</mdclass:Subsystem>

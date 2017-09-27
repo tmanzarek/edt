@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="992611d2-423d-46e4-8757-3c28f2a39f2c">
+  <producedTypes>
+    <objectType typeId="c16709a8-2587-4579-89af-3581ebc8ee7c" valueTypeId="163b91a1-485a-4cdd-b092-e69f9a148847"/>
+    <refType typeId="a05a76e2-f7f8-416f-aa87-b272d1ff3732" valueTypeId="2ade100f-2944-493b-bc66-911e6d89a04e"/>
+    <selectionType typeId="4f6a8c7b-da91-41b1-809d-b00ac9605348" valueTypeId="44d51ac3-e32d-42a4-b8e6-63c8c88ef189"/>
+    <listType typeId="0d5f613f-a3df-436d-bd79-581e7cda0280" valueTypeId="b9628444-56f5-405b-af8c-2d6bb2af8f9e"/>
+    <managerType typeId="781c7dc5-a2f4-4813-a9d4-29784f51f233" valueTypeId="62c7de3b-4306-48e9-abab-c4f776c4315e"/>
+  </producedTypes>
+  <name>ВидСМР</name>
+  <synonym>
+    <key>ru</key>
+    <value>Вид СМР</value>
+  </synonym>
+  <comment></comment>
+  <inputByString>Catalog.ВидСМР.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидСМР.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>30</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

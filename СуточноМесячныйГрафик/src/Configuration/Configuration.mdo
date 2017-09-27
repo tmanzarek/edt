@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="12f9bb98-4da7-4859-bee5-197c1615ce10">
+  <name>СуточноМесячныйГрафик</name>
+  <synonym>
+    <key>ru</key>
+    <value>Суточно-месячный график</value>
+  </synonym>
+  <comment></comment>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="9d281502-f29a-41dc-b670-a8356383f5d9"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="d05f4b14-5a28-408e-bb77-a158cf5a7211"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="96c548bd-ae49-46c2-9a5f-490aaa3786ef"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="56dc4686-6e58-4100-bae6-d5be35697074"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="ed8868f8-3000-4327-8ebc-823812d27f92"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="781a3f84-4b52-4100-ab31-4a9a0aff2853"/>
+  <namePrefix></namePrefix>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <defaultRoles>Role.ПолныеПрава</defaultRoles>
+  <vendor></vendor>
+  <version></version>
+  <updateCatalogAddress></updateCatalogAddress>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousExtensionAndAddInCallUseMode>DontUse</synchronousExtensionAndAddInCallUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <compatibilityMode>8.3.10</compatibilityMode>
+  <languages uuid="c0296fae-ea31-480b-841c-7a49fe6565cd">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <comment></comment>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.СуточноМесячноеПланирование</subsystems>
+  <roles>Role.ПолныеПрава</roles>
+  <catalogs>Catalog.СправочникПодрядчиков</catalogs>
+  <catalogs>Catalog.ТипСМР</catalogs>
+  <catalogs>Catalog.ВидСМР</catalogs>
+  <catalogs>Catalog.ЕдИзм</catalogs>
+  <catalogs>Catalog.СправочникСМР</catalogs>
+  <catalogs>Catalog.РуководительРабот</catalogs>
+  <catalogs>Catalog.СправочникТитулов</catalogs>
+  <catalogs>Catalog.ШифрыПроекта</catalogs>
+  <catalogs>Catalog.ЛокальныеСметы</catalogs>
+  <documents>Document.ФактВыполнения</documents>
+  <documents>Document.ПланВыполнения</documents>
+  <reports>Report.Выполнение</reports>
+  <accumulationRegisters>AccumulationRegister.СуточныйГрафик</accumulationRegisters>
+</mdclass:Configuration>

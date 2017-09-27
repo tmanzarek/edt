@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d87d7329-ed35-4206-b1cc-2a6264a3978b">
+  <producedTypes>
+    <objectType typeId="d3fb4227-8781-4b40-91c9-2e825ebca1da" valueTypeId="5b57de17-d444-4e5b-a97e-f66b8d672d45"/>
+    <refType typeId="f3074d1f-095d-42a1-8a3b-81b92ee5ceaa" valueTypeId="c2e1c822-848c-4118-8be1-b9b8447c933b"/>
+    <selectionType typeId="77c02a58-6528-4ccf-a139-33f81d6f622a" valueTypeId="70bb4f28-3e0e-4da2-8b69-cc2e07066ee2"/>
+    <listType typeId="2e15b642-166f-4b76-9970-bcf077ea6125" valueTypeId="0a533e67-f3c0-47e2-ba5d-5077ebac6426"/>
+    <managerType typeId="3bb0822d-cba5-4d83-b5be-8ac1ea5eca1a" valueTypeId="191174b9-72d5-4971-b86e-f2380ac5c5db"/>
+  </producedTypes>
+  <name>СправочникПодрядчиков</name>
+  <synonym>
+    <key>ru</key>
+    <value>Справочник подрядчиков</value>
+  </synonym>
+  <comment></comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СправочникПодрядчиков.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СправочникПодрядчиков.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>75</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="6314be01-c1cf-4bb4-8816-250a5874f799">
+    <name>КодИТД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код ИТД</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+</mdclass:Catalog>

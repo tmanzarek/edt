@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f153dc8c-f526-4d36-81bc-3e71c17ac251">
+  <producedTypes>
+    <objectType typeId="66aeab90-4c2f-4a53-b8e1-83addf62485d" valueTypeId="5375eced-c314-4d3f-aa73-be273cf7bc68"/>
+    <refType typeId="761b9cb1-366f-4e50-98d5-58533f141c53" valueTypeId="f3b923ee-c793-4b4d-a7c3-fe6cbce33f33"/>
+    <selectionType typeId="c4209209-69f6-4943-b925-9fc3c797fd18" valueTypeId="1759be37-c450-4b3e-9af0-2ed1b6bb998c"/>
+    <listType typeId="350183b1-0847-4709-ba96-ffc7d4ec6f1b" valueTypeId="bebc28d1-d0ea-4850-a7b3-2a1efb1e2197"/>
+    <managerType typeId="bf74b005-4adf-4847-80a0-bb7b5903cf21" valueTypeId="f35975e6-5e42-4b61-836b-a3692eed68e1"/>
+  </producedTypes>
+  <name>РуководительРабот</name>
+  <synonym>
+    <key>ru</key>
+    <value>Руководитель работ</value>
+  </synonym>
+  <comment></comment>
+  <inputByString>Catalog.РуководительРабот.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.РуководительРабот.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

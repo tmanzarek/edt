@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="94591f1c-1185-453a-97d2-03a3b7c87d0d">
+  <producedTypes>
+    <objectType typeId="4c97963f-1eaa-4e04-ac11-b74e9fdc51ec" valueTypeId="8c2c4ba1-a529-485a-a635-eed94a962c0a"/>
+    <refType typeId="274bbdae-12d0-44bd-9996-632ab981fee4" valueTypeId="dbc26620-8857-4d48-8e30-a91ac0686b95"/>
+    <selectionType typeId="3aa80dc9-195d-4aea-a7a9-ac7cd45fabde" valueTypeId="d66ded36-c5d8-4bab-8a42-38a45136a8cd"/>
+    <listType typeId="f73e9c83-5475-423c-8eaf-d5ddbf83d5f8" valueTypeId="ec6692c7-afb1-4c88-9bde-a62eb3397588"/>
+    <managerType typeId="375f47b5-4e87-4b2c-817d-41ad31665339" valueTypeId="5fb73e25-1c72-462d-ad88-3dcc8d7da20a"/>
+  </producedTypes>
+  <name>СправочникСМР</name>
+  <synonym>
+    <key>ru</key>
+    <value>Справочник СМР</value>
+  </synonym>
+  <comment></comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СправочникСМР.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СправочникСМР.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>120</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="6b05b092-e4a8-49c2-b8f0-f0d5bae8615e">
+    <name>ТипСМР</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип СМР</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>CatalogRef.ТипСМР</types>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="6b42e6f6-d35b-4c08-bb3a-6c3b01396137">
+    <name>ВидСМР</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид СМР</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>CatalogRef.ВидСМР</types>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="4e843c30-168a-40dd-be73-4e0b601f74ee">
+    <name>КодСМР</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код СМР</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>15</length>
+      </stringQualifiers>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="8ac9c9e4-db16-4e67-a9c7-ee3fd3606c49">
+    <name>Цена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="1214d00d-ac8c-4674-9ec9-0cf1dc3c22db">
+    <name>ЦенаПоСмете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена по смете</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="4bd4e9e5-d715-44c4-99b5-3d495c1ceb1d">
+    <name>ЕдИзм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>CatalogRef.ЕдИзм</types>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="b1f0df46-3133-411f-ab7b-329b1ada355d">
+    <name>ТЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТЗ</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+</mdclass:Catalog>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c69cac29-c9d4-4687-858e-f35c542374fe">
+  <producedTypes>
+    <objectType typeId="c3b68b63-0a3f-4eb3-9b04-724e171c3d12" valueTypeId="1c800712-269d-4601-b605-38fc3fd34086"/>
+    <refType typeId="bb72a207-a31e-4056-8700-584e43cf723d" valueTypeId="80db330c-c5ba-4e6e-82ea-f34f750b7bec"/>
+    <selectionType typeId="a3d97b49-52d5-4ede-b816-012a1591ac03" valueTypeId="ebc8a770-f9d8-447b-825a-4ab86cc97d20"/>
+    <listType typeId="47b9bd4d-e490-4a4b-97b3-6bd038b38c1d" valueTypeId="eecacc38-1e6d-44c7-91a0-1ac622e53fb5"/>
+    <managerType typeId="d72ce74a-ae50-4861-b89c-a71d0af58f21" valueTypeId="d4845aad-6d51-4745-b2c8-bcb25a269f78"/>
+  </producedTypes>
+  <name>СправочникТитулов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Справочник титулов</value>
+  </synonym>
+  <comment></comment>
+  <inputByString>Catalog.СправочникТитулов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СправочникТитулов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>20</codeLength>
+  <descriptionLength>60</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="362badbc-57e8-45ae-9860-387e60205b7a">
+    <name>НаличиеВСМГ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наличие в СМГ</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="754b9156-0132-44b3-8127-8806dbea178a">
+    <name>НаименованиеЦеха</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование цеха</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>40</length>
+      </stringQualifiers>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f2ef03f9-aad4-4d90-83ad-8c39289cd70e">
+    <name>РуководительРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Руководитель работ</value>
+    </synonym>
+    <comment></comment>
+    <type>
+      <types>CatalogRef.РуководительРабот</types>
+    </type>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+</mdclass:Catalog>

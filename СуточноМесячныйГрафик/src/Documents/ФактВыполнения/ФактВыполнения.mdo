@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cee90d1a-10a8-4c7a-a801-f68f501dc6f0">
+  <producedTypes>
+    <objectType typeId="4c2fc5e6-797e-47c7-a187-c07e1a9bb89b" valueTypeId="e07f2e88-b6eb-4d96-b559-a93b0e2d0b0e"/>
+    <refType typeId="32a7013b-be4f-4284-9fec-32f60ecd51b7" valueTypeId="1540af64-f544-477f-8686-e0d6cc04063b"/>
+    <selectionType typeId="af6eb62c-3e4c-4370-8ed2-1400c4f54a84" valueTypeId="715c8479-be93-400a-93ed-828abe5f167e"/>
+    <listType typeId="23bcdad6-0fb9-4dae-a7bb-1db63c35cab9" valueTypeId="aefc44f6-1a8b-485e-a823-6bb659952f66"/>
+    <managerType typeId="1c4c1bb0-c149-482a-b345-9e8d03dce76a" valueTypeId="8d70662c-73ef-4b71-a5bc-3af4553ebd5e"/>
+  </producedTypes>
+  <name>ФактВыполнения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Факт выполнения</value>
+  </synonym>
+  <comment></comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ФактВыполнения.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ФактВыполнения.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecords>AccumulationRegister.СуточныйГрафик</registerRecords>
+  <forms uuid="db0e55c5-7a51-45db-b38d-175609004bd5">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <comment></comment>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="b545087f-b5df-4bca-bca9-ceab1a97786a">
+    <producedTypes>
+      <objectType typeId="d30e76bd-03fb-4e88-8e90-34cdab4474ca" valueTypeId="4b0550bd-8530-471b-9196-3203fce4a6b6"/>
+      <rowType typeId="16c82c84-af5b-4cc3-9f83-fd723dd6d360" valueTypeId="d40048a1-f2f3-4767-9659-dae3460f9172"/>
+    </producedTypes>
+    <name>ТабличнаяЧасть1</name>
+    <comment></comment>
+    <attributes uuid="06109014-4f39-45fb-bf1d-154dd1470d2a">
+      <name>Подрядчик</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подрядчик</value>
+      </synonym>
+      <comment></comment>
+      <type>
+        <types>CatalogRef.СправочникПодрядчиков</types>
+      </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4ccc250c-3792-413c-bd6e-cb6dd7b32aa6">
+      <name>ШифрПроекта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Шифр проекта</value>
+      </synonym>
+      <comment></comment>
+      <type>
+        <types>CatalogRef.ШифрыПроекта</types>
+      </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a857c835-24ce-469c-9f36-911a16292d33">
+      <name>НомерЛокальнойСметы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер локальной сметы</value>
+      </synonym>
+      <comment></comment>
+      <type>
+        <types>CatalogRef.ЛокальныеСметы</types>
+      </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8aa77aee-c00d-4602-87a4-024c65f4f56b">
+      <name>НаименованиеСМР</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование СМР</value>
+      </synonym>
+      <comment></comment>
+      <type>
+        <types>CatalogRef.СправочникСМР</types>
+      </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5e35bf60-8157-4448-8bfc-ece4804fa1d6">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Единица измерения</value>
+      </synonym>
+      <comment></comment>
+      <type>
+        <types>CatalogRef.ЕдИзм</types>
+      </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c067b6df-e7be-4a5f-8934-e0d291bf1eaa">
+      <name>СуточныйОбъём</name>
+      <synonym>
+        <key>ru</key>
+        <value>Суточный объём</value>
+      </synonym>
+      <comment></comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>
