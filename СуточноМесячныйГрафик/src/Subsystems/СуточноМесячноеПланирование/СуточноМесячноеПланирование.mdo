@@ -19,4 +19,6 @@
   <content>Document.ФактВыполнения</content>
   <content>Document.ПланВыполнения</content>
   <content>Report.Выполнение</content>
+  <content>DocumentJournal.Выполнение</content>
+  <content>InformationRegister.ДатаИзмененияПланаПоПроекту</content>
 </mdclass:Subsystem>

@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cee90d1a-10a8-4c7a-a801-f68f501dc6f0">
   <producedTypes>
-    <objectType typeId="4c2fc5e6-797e-47c7-a187-c07e1a9bb89b" valueTypeId="e07f2e88-b6eb-4d96-b559-a93b0e2d0b0e"/>
-    <refType typeId="32a7013b-be4f-4284-9fec-32f60ecd51b7" valueTypeId="1540af64-f544-477f-8686-e0d6cc04063b"/>
-    <selectionType typeId="af6eb62c-3e4c-4370-8ed2-1400c4f54a84" valueTypeId="715c8479-be93-400a-93ed-828abe5f167e"/>
-    <listType typeId="23bcdad6-0fb9-4dae-a7bb-1db63c35cab9" valueTypeId="aefc44f6-1a8b-485e-a823-6bb659952f66"/>
-    <managerType typeId="1c4c1bb0-c149-482a-b345-9e8d03dce76a" valueTypeId="8d70662c-73ef-4b71-a5bc-3af4553ebd5e"/>
+    <objectType typeId="4c2fc5e6-797e-47c7-a187-c07e1a9bb89b" valueTypeId="e07f2e88-b6eb-4d96-b559-a93b0e2d0b0e">
+    </objectType>
+    <refType typeId="32a7013b-be4f-4284-9fec-32f60ecd51b7" valueTypeId="1540af64-f544-477f-8686-e0d6cc04063b">
+      <emptyRef/>
+    </refType>
+    <selectionType typeId="af6eb62c-3e4c-4370-8ed2-1400c4f54a84" valueTypeId="715c8479-be93-400a-93ed-828abe5f167e">
+    </selectionType>
+    <listType typeId="23bcdad6-0fb9-4dae-a7bb-1db63c35cab9" valueTypeId="aefc44f6-1a8b-485e-a823-6bb659952f66">
+    </listType>
+    <managerType typeId="1c4c1bb0-c149-482a-b345-9e8d03dce76a" valueTypeId="8d70662c-73ef-4b71-a5bc-3af4553ebd5e">
+    </managerType>
   </producedTypes>
   <name>ФактВыполнения</name>
   <synonym>
     <key>ru</key>
-    <value>Факт выполнения</value>
+    <value>Суточный факт выполнения</value>
   </synonym>
   <comment></comment>
   <useStandardCommands>true</useStandardCommands>
@@ -25,24 +31,25 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.ФактВыполнения.Form.ФормаДокумента</defaultObjectForm>
+  <realTimePosting>Deny</realTimePosting>
   <registerRecords>AccumulationRegister.СуточныйГрафик</registerRecords>
-  <forms uuid="db0e55c5-7a51-45db-b38d-175609004bd5">
+  <forms uuid="10364c37-6bd7-4ae8-b251-e1fd91018fb1">
     <name>ФормаДокумента</name>
     <synonym>
       <key>ru</key>
       <value>Форма документа</value>
     </synonym>
-    <comment></comment>
-    <formType>Ordinary</formType>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
   <tabularSections uuid="b545087f-b5df-4bca-bca9-ceab1a97786a">
     <producedTypes>
-      <objectType typeId="d30e76bd-03fb-4e88-8e90-34cdab4474ca" valueTypeId="4b0550bd-8530-471b-9196-3203fce4a6b6"/>
-      <rowType typeId="16c82c84-af5b-4cc3-9f83-fd723dd6d360" valueTypeId="d40048a1-f2f3-4767-9659-dae3460f9172"/>
+      <objectType typeId="d30e76bd-03fb-4e88-8e90-34cdab4474ca" valueTypeId="4b0550bd-8530-471b-9196-3203fce4a6b6">
+      </objectType>
+      <rowType typeId="16c82c84-af5b-4cc3-9f83-fd723dd6d360" valueTypeId="d40048a1-f2f3-4767-9659-dae3460f9172">
+      </rowType>
     </producedTypes>
-    <name>ТабличнаяЧасть1</name>
+    <name>Выполнение</name>
     <comment></comment>
     <attributes uuid="06109014-4f39-45fb-bf1d-154dd1470d2a">
       <name>Подрядчик</name>
@@ -58,6 +65,16 @@
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="631e5f6e-84f4-48ea-8556-369ddc2e4825">
+      <name>Титул</name>
+      <synonym>
+        <key>ru</key>
+        <value>Титул</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СправочникТитулов</types>
+      </type>
     </attributes>
     <attributes uuid="4ccc250c-3792-413c-bd6e-cb6dd7b32aa6">
       <name>ШифрПроекта</name>

@@ -13,17 +13,23 @@
         <common>true</common>
       </visible>
     </visibilityFragments>
+    <visibilityFragments>
+      <command>DocumentJournal.Выполнение.StandardCommand.OpenList</command>
+      <visible/>
+    </visibilityFragments>
   </commandsVisibility>
   <commandsPlacement>
     <placementFragments>
       <group>NavigationPanelImportant</group>
       <commands>Document.ПланВыполнения.StandardCommand.OpenList</commands>
       <commands>Document.ФактВыполнения.StandardCommand.OpenList</commands>
+      <commands>Document.ПланВыполненияПоВсемуПроекту.StandardCommand.OpenList</commands>
     </placementFragments>
   </commandsPlacement>
   <commandsOrder>
     <orderFragments>
       <group>NavigationPanelImportant</group>
+      <commands>Document.ПланВыполненияПоВсемуПроекту.StandardCommand.OpenList</commands>
       <commands>Document.ПланВыполнения.StandardCommand.OpenList</commands>
       <commands>Document.ФактВыполнения.StandardCommand.OpenList</commands>
     </orderFragments>

@@ -38,6 +38,7 @@
   </languages>
   <subsystems>Subsystem.СуточноМесячноеПланирование</subsystems>
   <roles>Role.ПолныеПрава</roles>
+  <commonModules>CommonModule.ВыполнитьНаСервере</commonModules>
   <catalogs>Catalog.СправочникПодрядчиков</catalogs>
   <catalogs>Catalog.ТипСМР</catalogs>
   <catalogs>Catalog.ВидСМР</catalogs>
@@ -49,6 +50,10 @@
   <catalogs>Catalog.ЛокальныеСметы</catalogs>
   <documents>Document.ФактВыполнения</documents>
   <documents>Document.ПланВыполнения</documents>
+  <documents>Document.ПланВыполненияПоВсемуПроекту</documents>
+  <documentJournals>DocumentJournal.Выполнение</documentJournals>
   <reports>Report.Выполнение</reports>
+  <informationRegisters>InformationRegister.ДатаИзмененияПланаПоПроекту</informationRegisters>
   <accumulationRegisters>AccumulationRegister.СуточныйГрафик</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ПланПоВсемуПроекту</accumulationRegisters>
 </mdclass:Configuration>

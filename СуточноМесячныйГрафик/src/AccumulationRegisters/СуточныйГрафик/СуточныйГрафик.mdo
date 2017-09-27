@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b14a9dbc-fa38-46de-9412-27195b8a2f6a">
   <producedTypes>
-    <selectionType typeId="83f78886-0e6a-4c92-a032-1ce90d1dace4" valueTypeId="6a94e00c-108f-431b-b69a-269dd5ac4d7a"/>
-    <listType typeId="715eb244-b636-4746-99b7-abaf0e52bb8c" valueTypeId="67c2770a-6cda-4f54-9a70-5f072e2d5ce0"/>
-    <managerType typeId="f3aff59b-039d-48a0-be2d-40f532deca61" valueTypeId="5c0823b7-44c4-490f-9846-20b7738faccb"/>
-    <recordSetType typeId="9680e819-7aca-46c2-b967-5c4263ae0938" valueTypeId="baa23547-956f-41c1-852b-35d905ffc50c"/>
-    <recordKeyType typeId="2876220b-e6a5-4456-8aa0-22b0d5bc9304" valueTypeId="4da6820f-ffb3-4c29-a284-74e8c9bbad61"/>
-    <recordType typeId="7883fa4c-e95b-4fc5-8a6b-0b4fe780f981" valueTypeId="0c6f0429-3a6a-4e69-979a-98375afcfe37"/>
+    <selectionType typeId="83f78886-0e6a-4c92-a032-1ce90d1dace4" valueTypeId="6a94e00c-108f-431b-b69a-269dd5ac4d7a">
+    </selectionType>
+    <listType typeId="715eb244-b636-4746-99b7-abaf0e52bb8c" valueTypeId="67c2770a-6cda-4f54-9a70-5f072e2d5ce0">
+    </listType>
+    <managerType typeId="f3aff59b-039d-48a0-be2d-40f532deca61" valueTypeId="5c0823b7-44c4-490f-9846-20b7738faccb">
+    </managerType>
+    <recordSetType typeId="9680e819-7aca-46c2-b967-5c4263ae0938" valueTypeId="baa23547-956f-41c1-852b-35d905ffc50c">
+    </recordSetType>
+    <recordKeyType typeId="2876220b-e6a5-4456-8aa0-22b0d5bc9304" valueTypeId="4da6820f-ffb3-4c29-a284-74e8c9bbad61">
+    </recordKeyType>
+    <recordType typeId="7883fa4c-e95b-4fc5-8a6b-0b4fe780f981" valueTypeId="0c6f0429-3a6a-4e69-979a-98375afcfe37">
+    </recordType>
   </producedTypes>
   <name>СуточныйГрафик</name>
   <synonym>
@@ -16,7 +22,6 @@
   <comment></comment>
   <registerType>Turnovers</registerType>
   <dataLockControlMode>Managed</dataLockControlMode>
-  <enableTotalsSplitting>true</enableTotalsSplitting>
   <resources uuid="96aa7795-2b0a-4a6d-8a0e-9c07434be55c">
     <name>ПланОбъёмВыполнения</name>
     <synonym>
@@ -68,8 +73,21 @@
     <mask></mask>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
     <indexing>Index</indexing>
     <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="cd8136fd-d7ce-414b-b09c-c864f102cc70">
+    <name>Титул</name>
+    <synonym>
+      <key>ru</key>
+      <value>Титул</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СправочникТитулов</types>
+    </type>
+    <denyIncompleteValues>true</denyIncompleteValues>
     <useInTotals>true</useInTotals>
   </dimensions>
   <dimensions uuid="29a0be4b-550f-46a2-be96-771ea53296f7">

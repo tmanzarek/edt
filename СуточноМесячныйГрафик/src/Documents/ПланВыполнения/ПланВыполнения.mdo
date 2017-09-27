@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="91b19393-a83d-4d74-9f18-0e6006dd301e">
   <producedTypes>
-    <objectType typeId="09b18697-9d6e-488d-932c-28c1cd125b2e" valueTypeId="7ff418a5-e912-48bc-9b75-d24b072be74f"/>
-    <refType typeId="03e79a37-6861-452f-b579-1f18296df025" valueTypeId="09c0eafa-2af9-4a15-a6aa-0ec944f8df42"/>
-    <selectionType typeId="4a1019ec-a381-407b-8132-cc1bc117ca5f" valueTypeId="a6c87b98-f8fc-49ed-9c2b-01528cd7af4f"/>
-    <listType typeId="894b5202-8a43-4d86-9608-53e5290b9d95" valueTypeId="bce21b9a-0208-4e96-a0fe-8a8f469c2f3a"/>
-    <managerType typeId="b89fd938-d7e6-4328-9141-a40106405f7b" valueTypeId="f8757bde-da17-4dc2-8d38-cbf6251dffe5"/>
+    <objectType typeId="09b18697-9d6e-488d-932c-28c1cd125b2e" valueTypeId="7ff418a5-e912-48bc-9b75-d24b072be74f">
+    </objectType>
+    <refType typeId="03e79a37-6861-452f-b579-1f18296df025" valueTypeId="09c0eafa-2af9-4a15-a6aa-0ec944f8df42">
+      <emptyRef/>
+    </refType>
+    <selectionType typeId="4a1019ec-a381-407b-8132-cc1bc117ca5f" valueTypeId="a6c87b98-f8fc-49ed-9c2b-01528cd7af4f">
+    </selectionType>
+    <listType typeId="894b5202-8a43-4d86-9608-53e5290b9d95" valueTypeId="bce21b9a-0208-4e96-a0fe-8a8f469c2f3a">
+    </listType>
+    <managerType typeId="b89fd938-d7e6-4328-9141-a40106405f7b" valueTypeId="f8757bde-da17-4dc2-8d38-cbf6251dffe5">
+    </managerType>
   </producedTypes>
   <name>ПланВыполнения</name>
   <synonym>
     <key>ru</key>
-    <value>План выполнения</value>
+    <value>План выполнения за период</value>
   </synonym>
   <comment></comment>
   <useStandardCommands>true</useStandardCommands>
@@ -25,25 +31,51 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.ПланВыполнения.Form.ФормаДокумента</defaultObjectForm>
+  <realTimePosting>Deny</realTimePosting>
   <registerRecords>AccumulationRegister.СуточныйГрафик</registerRecords>
-  <forms uuid="eeef05d3-2199-4da5-b442-eb3bf9eea5a3">
+  <forms uuid="cb534b5d-7808-4e49-8e23-16057becbc4a">
     <name>ФормаДокумента</name>
     <synonym>
       <key>ru</key>
       <value>Форма документа</value>
     </synonym>
-    <comment></comment>
-    <formType>Ordinary</formType>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
   <tabularSections uuid="1fa74558-6af0-4996-aa22-0af4bec379e7">
     <producedTypes>
-      <objectType typeId="71442df4-4cca-4383-8f87-8f1e2881cce1" valueTypeId="a7c1b4aa-71c3-4436-a0e4-9ca087988c39"/>
-      <rowType typeId="7cadb11f-b732-4b7d-92c9-ab93cfca9d39" valueTypeId="9f8f6831-19cb-4bb0-afb0-1cdd4ec214d9"/>
+      <objectType typeId="71442df4-4cca-4383-8f87-8f1e2881cce1" valueTypeId="a7c1b4aa-71c3-4436-a0e4-9ca087988c39">
+      </objectType>
+      <rowType typeId="7cadb11f-b732-4b7d-92c9-ab93cfca9d39" valueTypeId="9f8f6831-19cb-4bb0-afb0-1cdd4ec214d9">
+      </rowType>
     </producedTypes>
-    <name>ТабличнаяЧасть1</name>
+    <name>Выполнение</name>
     <comment></comment>
+    <attributes uuid="3d8c38b2-7841-4735-a098-ac361470c400">
+      <name>Подрядчик</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подрядчик</value>
+      </synonym>
+      <comment></comment>
+      <type>
+        <types>CatalogRef.СправочникПодрядчиков</types>
+      </type>
+      <mask></mask>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="69cda5eb-a1db-415b-8836-a8b8ca08b8a5">
+      <name>Титул</name>
+      <synonym>
+        <key>ru</key>
+        <value>Титул</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СправочникТитулов</types>
+      </type>
+    </attributes>
     <attributes uuid="fcc1d790-fe8b-4ff1-a94f-00a34e623904">
       <name>ШифрПроекта</name>
       <synonym>
