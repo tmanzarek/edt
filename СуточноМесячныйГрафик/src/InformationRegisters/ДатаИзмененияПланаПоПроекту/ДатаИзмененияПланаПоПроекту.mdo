@@ -115,6 +115,7 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
     <fillValue xsi:type="core:UndefinedValue"/>
   </dimensions>
   <dimensions uuid="b1a21c4c-149f-47a1-98d0-7222dab8a9fb">

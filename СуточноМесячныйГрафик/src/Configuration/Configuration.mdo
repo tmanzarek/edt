@@ -54,6 +54,7 @@
   <documentJournals>DocumentJournal.Выполнение</documentJournals>
   <reports>Report.Выполнение</reports>
   <informationRegisters>InformationRegister.ДатаИзмененияПланаПоПроекту</informationRegisters>
+  <informationRegisters>InformationRegister.ПроизводственныйКалендарь</informationRegisters>
   <accumulationRegisters>AccumulationRegister.СуточныйГрафик</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ПланПоВсемуПроекту</accumulationRegisters>
 </mdclass:Configuration>

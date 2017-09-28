@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="06e4d67c-a253-4774-99e2-f385aa63161a">
+  <producedTypes>
+    <selectionType typeId="b3bdb271-509b-4232-a725-785ba377c797" valueTypeId="8ae1bae0-d8eb-4bd2-9cfd-7ec70a9f6bc7">
+    </selectionType>
+    <listType typeId="bcdae84a-f436-4f58-9355-04681e569f9e" valueTypeId="3a0c3b37-ef0b-4cf3-9535-23048b46bd78">
+    </listType>
+    <managerType typeId="c381640c-c9b8-4d4e-8768-879dec2781d4" valueTypeId="41e7450a-5826-4e09-8abc-e5cbcdbb5d44">
+    </managerType>
+    <recordSetType typeId="d522eaf7-61d6-42fd-ad15-76570332780e" valueTypeId="a8111aee-466e-4d02-aad8-1184a5847d3b">
+    </recordSetType>
+    <recordKeyType typeId="1c56a549-0bbb-420b-bede-3c9b497fb3bd" valueTypeId="8cf9f67e-1a9d-4478-9ce7-4a5aeca182d6">
+    </recordKeyType>
+    <recordType typeId="b4427b8d-abd4-4c75-81e4-b04dd4f3427d" valueTypeId="23b5fb96-39a7-4e9b-98fc-2352f9cb7819">
+    </recordType>
+    <recordManagerType typeId="7c19a248-5d81-425d-8c06-18a45cf9d4ca" valueTypeId="b3f8c7e1-7718-4de6-b12c-b2697a46b71e">
+    </recordManagerType>
+  </producedTypes>
+  <name>ПроизводственныйКалендарь</name>
+  <synonym>
+    <key>ru</key>
+    <value>Производственный календарь</value>
+  </synonym>
+  <comment></comment>
+  <defaultListForm>InformationRegister.ПроизводственныйКалендарь.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <name>Active</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>LineNumber</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>Recorder</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <name>Period</name>
+    <comment></comment>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <mask></mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="0b85a196-c116-4a19-a2c5-8cb3593a9e42">
+    <name>ГодКалендаря</name>
+    <synonym>
+      <key>ru</key>
+      <value>Год календаря</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+      </numberQualifiers>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="91d6bfbc-f7df-4682-a864-d45cd8a6daf2">
+    <name>ДатаКалендаря</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата календаря</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="8a37ab45-2c71-4467-a29e-dc8a05db8c02">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

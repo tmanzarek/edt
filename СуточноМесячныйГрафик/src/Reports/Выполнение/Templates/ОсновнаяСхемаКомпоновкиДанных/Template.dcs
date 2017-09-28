@@ -30,9 +30,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДатаВыполнения</dataPath>
 			<field>ДатаВыполнения</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЕдИзм</dataPath>
@@ -49,56 +46,35 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>МесяцОтчета</dataPath>
-			<field>МесяцОтчета</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Месяц отчета</v8:content>
-				</v8:item>
-			</title>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ФактОбъёмВыполненияЗаДень</dataPath>
-			<field>ФактОбъёмВыполненияЗаДень</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Факт объём выполнения за день</v8:content>
-				</v8:item>
-			</title>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
-					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
-				</dcscor:item>
-			</appearance>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ПланОбъёмВыполненияЗаДень</dataPath>
-			<field>ПланОбъёмВыполненияЗаДень</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>План объём выполнения за день</v8:content>
-				</v8:item>
-			</title>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
-					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
-				</dcscor:item>
-			</appearance>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Титул</dataPath>
 			<field>Титул</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланОбъёмВыполненияЗаДень</dataPath>
+			<field>ПланОбъёмВыполненияЗаДень</field>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактОбъёмВыполненияЗаДень</dataPath>
+			<field>ФактОбъёмВыполненияЗаДень</field>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -108,12 +84,67 @@
 	СуточныйГрафикОбороты.ЛокальнаяСмета КАК ЛокальнаяСмета,
 	СуточныйГрафикОбороты.СМР КАК СМР,
 	СуточныйГрафикОбороты.ЕдИзм КАК ЕдИзм,
-	СуточныйГрафикОбороты.ДатаВыполнения КАК ДатаВыполнения,
+	СуточныйГрафикОбороты.Период КАК ДатаВыполнения,
 	СуточныйГрафикОбороты.ПланОбъёмВыполненияОборот КАК ПланОбъёмВыполненияЗаДень,
-	СуточныйГрафикОбороты.ФактОбъёмВыполненияОборот КАК ФактОбъёмВыполненияЗаДень,
-	НАЧАЛОПЕРИОДА(СуточныйГрафикОбороты.ДатаВыполнения, МЕСЯЦ) КАК МесяцОтчета
+	СуточныйГрафикОбороты.ФактОбъёмВыполненияОборот КАК ФактОбъёмВыполненияЗаДень
+ПОМЕСТИТЬ ВыполнениеПоДням
 ИЗ
-	РегистрНакопления.СуточныйГрафик.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания,,) КАК СуточныйГрафикОбороты</query>
+	РегистрНакопления.СуточныйГрафик.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания, День,) КАК СуточныйГрафикОбороты
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПроизводственныйКалендарь.ДатаКалендаря,
+	СправочникПодрядчиков.Ссылка КАК Подрядчик,
+	СправочникТитулов.Ссылка КАК Титул,
+	ШифрыПроекта.Ссылка КАК ШифрПроекта,
+	ЛокальныеСметы.Ссылка КАК ЛокальнаяСмета,
+	СправочникСМР.Ссылка КАК СМР,
+	ЕдиницыИзмерения.Ссылка КАК ЕдИзм
+ПОМЕСТИТЬ Дни
+ИЗ
+	РегистрСведений.ПроизводственныйКалендарь КАК ПроизводственныйКалендарь,
+	Справочник.СправочникПодрядчиков КАК СправочникПодрядчиков,
+	Справочник.СправочникТитулов КАК СправочникТитулов,
+	Справочник.ШифрыПроекта КАК ШифрыПроекта,
+	Справочник.ЛокальныеСметы КАК ЛокальныеСметы,
+	Справочник.СправочникСМР КАК СправочникСМР,
+	Справочник.ЕдИзм КАК ЕдиницыИзмерения
+ГДЕ
+	ПроизводственныйКалендарь.ДатаКалендаря &gt;= &amp;ДатаНачала
+	И ПроизводственныйКалендарь.ДатаКалендаря &lt;= &amp;ДатаОкончания
+	И (СправочникПодрядчиков.Ссылка, СправочникТитулов.Ссылка, ШифрыПроекта.Ссылка, ЛокальныеСметы.Ссылка,
+		СправочникСМР.Ссылка, ЕдиницыИзмерения.Ссылка) В
+		(ВЫБРАТЬ
+			СуточныйГрафикОбороты.Подрядчик КАК Подрядчик,
+			СуточныйГрафикОбороты.Титул КАК Титул,
+			СуточныйГрафикОбороты.ШифрПроекта КАК ШифрПроекта,
+			СуточныйГрафикОбороты.ЛокальнаяСмета КАК ЛокальнаяСмета,
+			СуточныйГрафикОбороты.СМР КАК СМР,
+			СуточныйГрафикОбороты.ЕдИзм КАК ЕдИзм
+		ИЗ
+			РегистрНакопления.СуточныйГрафик.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания,,) КАК СуточныйГрафикОбороты)
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Дни.ДатаКалендаря КАК ДатаВыполнения,
+	Дни.Подрядчик,
+	Дни.Титул,
+	Дни.ШифрПроекта,
+	Дни.ЛокальнаяСмета,
+	Дни.СМР,
+	Дни.ЕдИзм,
+	ЕСТЬNULL(ВыполнениеПоДням.ПланОбъёмВыполненияЗаДень, 0)  КАК ПланОбъёмВыполненияЗаДень,
+	ЕСТЬNULL(ВыполнениеПоДням.ФактОбъёмВыполненияЗаДень, 0) КАК ФактОбъёмВыполненияЗаДень
+ИЗ
+	Дни КАК Дни
+		ЛЕВОЕ СОЕДИНЕНИЕ ВыполнениеПоДням КАК ВыполнениеПоДням
+		ПО Дни.Подрядчик = ВыполнениеПоДням.Подрядчик
+		И Дни.Титул = ВыполнениеПоДням.Титул
+		И Дни.ШифрПроекта = ВыполнениеПоДням.ШифрПроекта
+		И Дни.ЛокальнаяСмета = ВыполнениеПоДням.ЛокальнаяСмета
+		И Дни.СМР = ВыполнениеПоДням.СМР
+		И Дни.ЕдИзм = ВыполнениеПоДням.ЕдИзм
+		И Дни.ДатаКалендаря = ВыполнениеПоДням.ДатаВыполнения</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>ПланПоВсемуПроекту</name>
@@ -763,14 +794,6 @@
 		<group>СМР</group>
 	</totalField>
 	<totalField>
-		<dataPath>ПланОбъёмВыполненияЗаДень</dataPath>
-		<expression>Сумма(ПланОбъёмВыполненияЗаДень)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ФактОбъёмВыполненияЗаДень</dataPath>
-		<expression>Сумма(ФактОбъёмВыполненияЗаДень)</expression>
-	</totalField>
-	<totalField>
 		<dataPath>ПланОбъёмВыполненияЗаСегодня</dataPath>
 		<expression>ПланОбъёмВыполненияЗаСегодня</expression>
 		<group>Сегодня</group>
@@ -870,6 +893,14 @@
 </expression>
 		<group>СМР</group>
 	</totalField>
+	<totalField>
+		<dataPath>ПланОбъёмВыполненияЗаДень</dataPath>
+		<expression>Сумма(ПланОбъёмВыполненияЗаДень)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактОбъёмВыполненияЗаДень</dataPath>
+		<expression>Сумма(ФактОбъёмВыполненияЗаДень)</expression>
+	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -923,12 +954,12 @@
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
 			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
+				<v8:DateFractions>Date</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<expression>НАЧАЛОПЕРИОДА(&amp;ДатаОкончания, "МЕСЯЦ")</expression>
+		<useRestriction>false</useRestriction>
+		<expression>НАЧАЛОПЕРИОДА(&amp;ДатаНачала, "ДЕНЬ")</expression>
 		<valueListAllowed>false</valueListAllowed>
 		<availableAsField>true</availableAsField>
 		<denyIncompleteValues>false</denyIncompleteValues>
@@ -939,7 +970,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Дата отчета</v8:content>
+				<v8:content>Дата окончания</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -993,7 +1024,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+							<dcscor:value xsi:type="v8ui:Line" gap="false">
 								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
 							</dcscor:value>
 							<dcscor:item>
@@ -1022,16 +1053,16 @@
 							</dcscor:item>
 						</dcscor:item>
 						<dcscor:item>
-							<dcscor:parameter>Размещение</dcscor:parameter>
-							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
 							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -1049,7 +1080,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+							<dcscor:value xsi:type="v8ui:Line" gap="false">
 								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
 							</dcscor:value>
 							<dcscor:item>
@@ -1107,7 +1138,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+							<dcscor:value xsi:type="v8ui:Line" gap="false">
 								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
 							</dcscor:value>
 							<dcscor:item>
@@ -1185,16 +1216,16 @@
 							</dcscor:item>
 						</dcscor:item>
 						<dcscor:item>
-							<dcscor:parameter>Размещение</dcscor:parameter>
-							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
 							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -1386,16 +1417,16 @@
 							</dcscor:item>
 						</dcscor:item>
 						<dcscor:item>
-							<dcscor:parameter>Размещение</dcscor:parameter>
-							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
 							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -1587,16 +1618,16 @@
 							</dcscor:item>
 						</dcscor:item>
 						<dcscor:item>
-							<dcscor:parameter>Размещение</dcscor:parameter>
-							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
 							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
 							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -1848,6 +1879,12 @@
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Период</dcscor:parameter>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаНачала</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisMonth</v8:variant></dcscor:value>
+					<dcsset:userSettingID>9b84f4cf-35f9-4d8b-a1b9-758fe017780f</dcsset:userSettingID>
+				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:conditionalAppearance>
 				<dcsset:item>
@@ -2069,6 +2106,8 @@
 							<dcsset:placement>Vertically</dcsset:placement>
 						</dcsset:item>
 					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+					</dcsset:conditionalAppearance>
 				</dcsset:column>
 				<dcsset:row>
 					<dcsset:groupItems>
@@ -2199,6 +2238,65 @@
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto">
 							</dcsset:item>
 						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>ПланОбъёмВыполненияЗаДень</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ПланОбъёмВыполненияЗаДень</dcsset:left>
+										<dcsset:comparisonType>Greater</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+										<dcsset:presentation>
+										</dcsset:presentation>
+										<dcsset:application>Items</dcsset:application>
+									</dcsset:item>
+								</dcsset:filter>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>BackColor</dcscor:parameter>
+										<dcscor:value xsi:type="v8ui:Color">#c0c0c0</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+								<dcsset:useInGroup>Use</dcsset:useInGroup>
+								<dcsset:useInHierarchicalGroup>Use</dcsset:useInHierarchicalGroup>
+								<dcsset:useInOverall>Use</dcsset:useInOverall>
+								<dcsset:useInFieldsHeader>Use</dcsset:useInFieldsHeader>
+								<dcsset:useInHeader>Use</dcsset:useInHeader>
+								<dcsset:useInParameters>Use</dcsset:useInParameters>
+								<dcsset:useInFilter>Use</dcsset:useInFilter>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>ПланОбъёмВыполненияЗаДень</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>ФактОбъёмВыполненияЗаДень</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>HorizontalAlign</dcscor:parameter>
+										<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+									</dcscor:item>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>VerticalAlign</dcscor:parameter>
+										<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+								<dcsset:useInGroup>Use</dcsset:useInGroup>
+								<dcsset:useInHierarchicalGroup>Use</dcsset:useInHierarchicalGroup>
+								<dcsset:useInOverall>Use</dcsset:useInOverall>
+								<dcsset:useInFieldsHeader>Use</dcsset:useInFieldsHeader>
+								<dcsset:useInHeader>Use</dcsset:useInHeader>
+								<dcsset:useInParameters>Use</dcsset:useInParameters>
+								<dcsset:useInFilter>Use</dcsset:useInFilter>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
 						<dcsset:item>
 							<dcsset:use>false</dcsset:use>
 							<dcsset:groupItems>

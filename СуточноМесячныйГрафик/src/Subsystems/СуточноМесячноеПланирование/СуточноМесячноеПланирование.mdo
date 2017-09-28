@@ -21,4 +21,5 @@
   <content>Report.Выполнение</content>
   <content>DocumentJournal.Выполнение</content>
   <content>InformationRegister.ДатаИзмененияПланаПоПроекту</content>
+  <content>InformationRegister.ПроизводственныйКалендарь</content>
 </mdclass:Subsystem>

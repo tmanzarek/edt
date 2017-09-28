@@ -16,7 +16,7 @@
   <name>ПланВыполненияПоВсемуПроекту</name>
   <synonym>
     <key>ru</key>
-    <value>План выполнения по проекту</value>
+    <value>Проектный объем</value>
   </synonym>
   <comment></comment>
   <useStandardCommands>true</useStandardCommands>
