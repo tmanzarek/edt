@@ -306,6 +306,12 @@
         <chooseType>true</chooseType>
         <typeDomainEnabled>true</typeDomainEnabled>
         <textEdit>true</textEdit>
+        <choiceParameterLinks>
+          <name>Отбор.Владелец</name>
+          <datapath xsi:type="form:DataPath">
+            <segments>Items.Выполнение.CurrentData.Титул</segments>
+          </datapath>
+        </choiceParameterLinks>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="94591f1c-1185-453a-97d2-03a3b7c87d0d">
   <producedTypes>
-    <objectType typeId="4c97963f-1eaa-4e04-ac11-b74e9fdc51ec" valueTypeId="8c2c4ba1-a529-485a-a635-eed94a962c0a"/>
-    <refType typeId="274bbdae-12d0-44bd-9996-632ab981fee4" valueTypeId="dbc26620-8857-4d48-8e30-a91ac0686b95"/>
-    <selectionType typeId="3aa80dc9-195d-4aea-a7a9-ac7cd45fabde" valueTypeId="d66ded36-c5d8-4bab-8a42-38a45136a8cd"/>
-    <listType typeId="f73e9c83-5475-423c-8eaf-d5ddbf83d5f8" valueTypeId="ec6692c7-afb1-4c88-9bde-a62eb3397588"/>
-    <managerType typeId="375f47b5-4e87-4b2c-817d-41ad31665339" valueTypeId="5fb73e25-1c72-462d-ad88-3dcc8d7da20a"/>
+    <objectType typeId="4c97963f-1eaa-4e04-ac11-b74e9fdc51ec" valueTypeId="8c2c4ba1-a529-485a-a635-eed94a962c0a">
+    </objectType>
+    <refType typeId="274bbdae-12d0-44bd-9996-632ab981fee4" valueTypeId="dbc26620-8857-4d48-8e30-a91ac0686b95">
+      <emptyRef/>
+    </refType>
+    <selectionType typeId="3aa80dc9-195d-4aea-a7a9-ac7cd45fabde" valueTypeId="d66ded36-c5d8-4bab-8a42-38a45136a8cd">
+    </selectionType>
+    <listType typeId="f73e9c83-5475-423c-8eaf-d5ddbf83d5f8" valueTypeId="ec6692c7-afb1-4c88-9bde-a62eb3397588">
+    </listType>
+    <managerType typeId="375f47b5-4e87-4b2c-817d-41ad31665339" valueTypeId="5fb73e25-1c72-462d-ad88-3dcc8d7da20a">
+    </managerType>
   </producedTypes>
   <name>СправочникСМР</name>
   <synonym>
@@ -148,13 +154,12 @@
       <types>Number</types>
       <numberQualifiers>
         <precision>15</precision>
-        <scale>3</scale>
+        <scale>4</scale>
       </numberQualifiers>
     </type>
     <mask></mask>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </attributes>
 </mdclass:Catalog>

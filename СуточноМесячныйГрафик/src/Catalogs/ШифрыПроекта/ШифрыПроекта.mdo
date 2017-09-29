@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8320c8f7-164b-4422-ac3d-482dbfd57016">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8320c8f7-164b-4422-ac3d-482dbfd57016">
   <producedTypes>
-    <objectType typeId="87447217-4e97-4729-84b4-e5f0da962e70" valueTypeId="39f8dcf7-b79a-4932-8255-843b155a7f26"/>
-    <refType typeId="ab974e8d-a895-4aa2-bd6c-27603373d59b" valueTypeId="3355f45a-d1fe-4d59-bb70-c1a3f4f8ab51"/>
-    <selectionType typeId="ae8e3a2c-40e6-45b4-a097-439762b71f5c" valueTypeId="cd1018f4-c61f-4119-b183-6bbc056569fa"/>
-    <listType typeId="af9162a2-32b3-4c47-987d-d2c13e3c556b" valueTypeId="fac5386d-f14e-40d5-a7a7-029719bfb676"/>
-    <managerType typeId="6dff32e8-e009-4d53-b896-bfca4a94c769" valueTypeId="a0944e06-c3b9-432b-bd68-85045573583b"/>
+    <objectType typeId="87447217-4e97-4729-84b4-e5f0da962e70" valueTypeId="39f8dcf7-b79a-4932-8255-843b155a7f26">
+    </objectType>
+    <refType typeId="ab974e8d-a895-4aa2-bd6c-27603373d59b" valueTypeId="3355f45a-d1fe-4d59-bb70-c1a3f4f8ab51">
+      <emptyRef/>
+    </refType>
+    <selectionType typeId="ae8e3a2c-40e6-45b4-a097-439762b71f5c" valueTypeId="cd1018f4-c61f-4119-b183-6bbc056569fa">
+    </selectionType>
+    <listType typeId="af9162a2-32b3-4c47-987d-d2c13e3c556b" valueTypeId="fac5386d-f14e-40d5-a7a7-029719bfb676">
+    </listType>
+    <managerType typeId="6dff32e8-e009-4d53-b896-bfca4a94c769" valueTypeId="a0944e06-c3b9-432b-bd68-85045573583b">
+    </managerType>
   </producedTypes>
   <name>ШифрыПроекта</name>
   <synonym>
@@ -17,11 +23,25 @@
   <inputByString>Catalog.ШифрыПроекта.StandardAttribute.Description</inputByString>
   <inputByString>Catalog.ШифрыПроекта.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <name>Owner</name>
+    <synonym>
+      <key>ru</key>
+      <value>Титул</value>
+    </synonym>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.СправочникТитулов.EmptyRef</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+  </standardAttributes>
   <createOnInput>Use</createOnInput>
   <dataLockControlMode>Managed</dataLockControlMode>
   <fullTextSearch>Use</fullTextSearch>
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.СправочникТитулов</owners>
   <codeLength>9</codeLength>
   <descriptionLength>35</descriptionLength>
   <codeType>String</codeType>

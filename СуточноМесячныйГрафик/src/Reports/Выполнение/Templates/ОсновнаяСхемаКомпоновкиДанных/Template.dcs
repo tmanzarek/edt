@@ -89,62 +89,70 @@
 	СуточныйГрафикОбороты.ФактОбъёмВыполненияОборот КАК ФактОбъёмВыполненияЗаДень
 ПОМЕСТИТЬ ВыполнениеПоДням
 ИЗ
-	РегистрНакопления.СуточныйГрафик.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания, День,) КАК СуточныйГрафикОбороты
+	РегистрНакопления.СуточныйГрафик.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания, День, ) КАК СуточныйГрафикОбороты
 ;
+
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ПроизводственныйКалендарь.ДатаКалендаря,
-	СправочникПодрядчиков.Ссылка КАК Подрядчик,
-	СправочникТитулов.Ссылка КАК Титул,
-	ШифрыПроекта.Ссылка КАК ШифрПроекта,
-	ЛокальныеСметы.Ссылка КАК ЛокальнаяСмета,
-	СправочникСМР.Ссылка КАК СМР,
-	ЕдиницыИзмерения.Ссылка КАК ЕдИзм
-ПОМЕСТИТЬ Дни
+	ПроизводственныйКалендарь.ДатаКалендаря КАК ДатаКалендаря
+ПОМЕСТИТЬ ДниКалендаря
 ИЗ
-	РегистрСведений.ПроизводственныйКалендарь КАК ПроизводственныйКалендарь,
-	Справочник.СправочникПодрядчиков КАК СправочникПодрядчиков,
-	Справочник.СправочникТитулов КАК СправочникТитулов,
-	Справочник.ШифрыПроекта КАК ШифрыПроекта,
-	Справочник.ЛокальныеСметы КАК ЛокальныеСметы,
-	Справочник.СправочникСМР КАК СправочникСМР,
-	Справочник.ЕдИзм КАК ЕдиницыИзмерения
+	РегистрСведений.ПроизводственныйКалендарь КАК ПроизводственныйКалендарь
 ГДЕ
 	ПроизводственныйКалендарь.ДатаКалендаря &gt;= &amp;ДатаНачала
 	И ПроизводственныйКалендарь.ДатаКалендаря &lt;= &amp;ДатаОкончания
-	И (СправочникПодрядчиков.Ссылка, СправочникТитулов.Ссылка, ШифрыПроекта.Ссылка, ЛокальныеСметы.Ссылка,
-		СправочникСМР.Ссылка, ЕдиницыИзмерения.Ссылка) В
-		(ВЫБРАТЬ
-			СуточныйГрафикОбороты.Подрядчик КАК Подрядчик,
-			СуточныйГрафикОбороты.Титул КАК Титул,
-			СуточныйГрафикОбороты.ШифрПроекта КАК ШифрПроекта,
-			СуточныйГрафикОбороты.ЛокальнаяСмета КАК ЛокальнаяСмета,
-			СуточныйГрафикОбороты.СМР КАК СМР,
-			СуточныйГрафикОбороты.ЕдИзм КАК ЕдИзм
-		ИЗ
-			РегистрНакопления.СуточныйГрафик.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания,,) КАК СуточныйГрафикОбороты)
 ;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВыполнениеПоДням.Подрядчик КАК Подрядчик,
+	ВыполнениеПоДням.Титул КАК Титул,
+	ВыполнениеПоДням.ШифрПроекта КАК ШифрПроекта,
+	ВыполнениеПоДням.ЛокальнаяСмета КАК ЛокальнаяСмета,
+	ВыполнениеПоДням.СМР КАК СМР,
+	ВыполнениеПоДням.ЕдИзм КАК ЕдИзм
+ПОМЕСТИТЬ КортежиИзмерений
+ИЗ
+	ВыполнениеПоДням КАК ВыполнениеПоДням
+;
+
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	Дни.ДатаКалендаря КАК ДатаВыполнения,
-	Дни.Подрядчик,
-	Дни.Титул,
-	Дни.ШифрПроекта,
-	Дни.ЛокальнаяСмета,
-	Дни.СМР,
-	Дни.ЕдИзм,
-	ЕСТЬNULL(ВыполнениеПоДням.ПланОбъёмВыполненияЗаДень, 0)  КАК ПланОбъёмВыполненияЗаДень,
+	ДниКалендаря.ДатаКалендаря КАК ДатаКалендаря,
+	КортежиИзмерений.Подрядчик КАК Подрядчик,
+	КортежиИзмерений.Титул КАК Титул,
+	КортежиИзмерений.ШифрПроекта КАК ШифрПроекта,
+	КортежиИзмерений.ЛокальнаяСмета КАК ЛокальнаяСмета,
+	КортежиИзмерений.СМР КАК СМР,
+	КортежиИзмерений.ЕдИзм КАК ЕдИзм
+ПОМЕСТИТЬ ВсеКортежиПоДням
+ИЗ
+	ДниКалендаря КАК ДниКалендаря,
+	КортежиИзмерений КАК КортежиИзмерений
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВсеКортежиПоДням.ДатаКалендаря КАК ДатаВыполнения,
+	ВсеКортежиПоДням.Подрядчик КАК Подрядчик,
+	ВсеКортежиПоДням.Титул КАК Титул,
+	ВсеКортежиПоДням.ШифрПроекта КАК ШифрПроекта,
+	ВсеКортежиПоДням.ЛокальнаяСмета КАК ЛокальнаяСмета,
+	ВсеКортежиПоДням.СМР КАК СМР,
+	ВсеКортежиПоДням.ЕдИзм КАК ЕдИзм,
+	ЕСТЬNULL(ВыполнениеПоДням.ПланОбъёмВыполненияЗаДень, 0) КАК ПланОбъёмВыполненияЗаДень,
 	ЕСТЬNULL(ВыполнениеПоДням.ФактОбъёмВыполненияЗаДень, 0) КАК ФактОбъёмВыполненияЗаДень
 ИЗ
-	Дни КАК Дни
+	ВсеКортежиПоДням КАК ВсеКортежиПоДням
 		ЛЕВОЕ СОЕДИНЕНИЕ ВыполнениеПоДням КАК ВыполнениеПоДням
-		ПО Дни.Подрядчик = ВыполнениеПоДням.Подрядчик
-		И Дни.Титул = ВыполнениеПоДням.Титул
-		И Дни.ШифрПроекта = ВыполнениеПоДням.ШифрПроекта
-		И Дни.ЛокальнаяСмета = ВыполнениеПоДням.ЛокальнаяСмета
-		И Дни.СМР = ВыполнениеПоДням.СМР
-		И Дни.ЕдИзм = ВыполнениеПоДням.ЕдИзм
-		И Дни.ДатаКалендаря = ВыполнениеПоДням.ДатаВыполнения</query>
+		ПО ВсеКортежиПоДням.Подрядчик = ВыполнениеПоДням.Подрядчик
+			И ВсеКортежиПоДням.Титул = ВыполнениеПоДням.Титул
+			И ВсеКортежиПоДням.ШифрПроекта = ВыполнениеПоДням.ШифрПроекта
+			И ВсеКортежиПоДням.ЛокальнаяСмета = ВыполнениеПоДням.ЛокальнаяСмета
+			И ВсеКортежиПоДням.СМР = ВыполнениеПоДням.СМР
+			И ВсеКортежиПоДням.ЕдИзм = ВыполнениеПоДням.ЕдИзм
+			И ВсеКортежиПоДням.ДатаКалендаря = ВыполнениеПоДням.ДатаВыполнения
+</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>ПланПоВсемуПроекту</name>
@@ -850,7 +858,7 @@
 	</totalField>
 	<totalField>
 		<dataPath>ПланОбъёмВыполненияПоПроекту</dataPath>
-		<expression>Сумма(ПланОбъёмВыполненияПоПроекту)</expression>
+		<expression>Минимум(ПланОбъёмВыполненияПоПроекту)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ОтставаниеЗаСегодня</dataPath>
@@ -1786,6 +1794,63 @@
 			</dcsat:item>
 		</template>
 	</template>
+	<template>
+		<name>Макет5</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По всему проекту</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">17.75</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
 	<groupTemplate>
 		<groupName>ДатаВыполнения</groupName>
 		<templateType>Header</templateType>
@@ -1805,6 +1870,11 @@
 		<groupName>ЗаВесьПериод</groupName>
 		<templateType>Header</templateType>
 		<template>Макет4</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>ПоВсемуПроекту</groupName>
+		<templateType>Header</templateType>
+		<template>Макет5</template>
 	</groupTemplate>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -1997,6 +2067,28 @@
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemTable">
 				<dcsset:column>
+					<dcsset:name>ПоВсемуПроекту</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ЗаВесьПериод</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto">
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПланОбъёмВыполненияПоПроекту</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
 					<dcsset:name>ЗаВесьПериод</dcsset:name>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
@@ -2165,6 +2257,9 @@
 								</dcsset:item>
 								<dcsset:item>
 									<dcsset:field>ОтставаниеЗаСегодня</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ПланОбъёмВыполненияПоПроекту</dcsset:field>
 								</dcsset:item>
 							</dcsset:selection>
 							<dcsset:filter>
