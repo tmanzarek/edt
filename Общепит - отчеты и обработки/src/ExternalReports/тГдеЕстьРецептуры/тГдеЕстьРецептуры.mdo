@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalReport xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="66387c48-35ae-45e5-8426-5e369aacbf45">
+  <producedTypes>
+    <objectType typeId="6b61ae40-1932-42c5-bc77-f3fe1f0dab45" valueTypeId="45fac70a-aabf-4c01-a614-3e03c1d40d72"/>
+  </producedTypes>
+  <name>тГдеЕстьРецептуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Где есть рецептуры</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="e41aff26-25cf-4bb6-b6c1-3f478a75f374" objectId="14e3965e-1803-403a-aef3-57f24b6ecd24"/>
+  <mainDataCompositionSchema>ExternalReport.тГдеЕстьРецептуры.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="a7a54551-99b4-4d60-955f-2d38012e457a">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:ExternalReport>

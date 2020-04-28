@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="098d228d-96b7-4542-8f9d-335dec4305c7">
+  <producedTypes>
+    <objectType typeId="dbbc7f66-0a7c-471f-b780-54502394d80a" valueTypeId="d1134edb-9291-471a-9f30-bbc5551f895d"/>
+  </producedTypes>
+  <name>тСоздатьПредопределенныйЭлементСправочника</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создать предопределенный элемент справочника</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="19c04fc3-ee33-4064-aaa0-315a8f49106c"/>
+  <defaultForm>ExternalDataProcessor.тСоздатьПредопределенныйЭлементСправочника.Form.Форма</defaultForm>
+  <forms uuid="0386d021-1e3c-4494-9475-4f3b66ce74da">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

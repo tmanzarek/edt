@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4781e228-f513-4285-b468-11cb50f3d629">
+  <producedTypes>
+    <objectType typeId="3abb257a-834f-4e2f-896f-b4b7aee2df97" valueTypeId="de120b9d-e515-48c1-b8f5-7a9b03ca84fd"/>
+  </producedTypes>
+  <name>тСозданиеСписанияМатериалов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создание списания материалов</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="87c49b4e-d6cf-4a0e-85f7-25add2e5402b"/>
+  <defaultForm>ExternalDataProcessor.тСозданиеСписанияМатериалов.Form.Форма</defaultForm>
+  <attributes uuid="834151fc-9c3b-4315-b9e9-d9a7406d6cda">
+    <name>ДокументСписания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ списания</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ТребованиеНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <forms uuid="22e9b830-70cc-4a68-be65-5386715fce3b">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

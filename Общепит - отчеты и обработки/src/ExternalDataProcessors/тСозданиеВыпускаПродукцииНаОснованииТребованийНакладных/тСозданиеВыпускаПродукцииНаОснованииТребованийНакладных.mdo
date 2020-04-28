@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d11d46f0-b2e2-4889-9846-965f75e9b7b9">
+  <producedTypes>
+    <objectType typeId="73de8d3a-29b0-4bc4-9e5f-c23521edefec" valueTypeId="1a5c260e-319f-41d4-aa5b-940b69532b42"/>
+  </producedTypes>
+  <name>тСозданиеВыпускаПродукцииНаОснованииТребованийНакладных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создание документов &quot;Выпуск продукции&quot; на основании требований-накладных</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="53d445a0-0ecd-4f64-9701-c6075d8a1256"/>
+  <defaultForm>ExternalDataProcessor.тСозданиеВыпускаПродукцииНаОснованииТребованийНакладных.Form.Форма</defaultForm>
+  <attributes uuid="4dcd519f-e8b6-45a0-9cb2-de25a339ed3c">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="96803dc6-1ffa-4f6b-894e-44a6f32b6751">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <forms uuid="e61e6f25-098c-4bdd-9b96-a3e843960589">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

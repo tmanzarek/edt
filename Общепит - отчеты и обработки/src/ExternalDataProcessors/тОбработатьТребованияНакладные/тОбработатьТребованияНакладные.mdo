@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="41dfd845-4324-4942-b9f2-93bbdd59f2e0">
+  <producedTypes>
+    <objectType typeId="513cb255-2d14-495a-82d1-ed753969eaee" valueTypeId="3dbd1a20-5f40-43ee-af9d-f7d9bb7a5fc2"/>
+  </producedTypes>
+  <name>тОбработатьТребованияНакладные</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработать требования-накладные</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="6f3c1110-4dfa-4336-8937-293968eb9d7a"/>
+  <defaultForm>ExternalDataProcessor.тОбработатьТребованияНакладные.Form.Форма</defaultForm>
+  <attributes uuid="dd2b6287-80ca-486f-9309-6339c85dfe7a">
+    <name>Период</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период</value>
+    </synonym>
+    <type>
+      <types>StandardPeriod</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9dfd5130-9d28-48a4-a79d-15ec51d654b4">
+    <name>ИзменятьДокументыСписания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменять документы списания</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="1a5622fa-d448-4dcb-95fe-7165baceb0dd">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

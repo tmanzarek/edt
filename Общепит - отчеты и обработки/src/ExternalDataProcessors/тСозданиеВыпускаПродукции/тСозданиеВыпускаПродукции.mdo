@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d38ff271-d63b-47ca-9516-9cb7fe7d2112">
+  <producedTypes>
+    <objectType typeId="115e629e-2cd0-44a3-9466-67d9451737d8" valueTypeId="e9c5b114-4cd1-48e5-8499-bc6d61d71a8a"/>
+  </producedTypes>
+  <name>тСозданиеВыпускаПродукции</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создание выпуска продукции</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="bf7408de-1707-4f29-87f8-359638e19eae"/>
+  <defaultForm>ExternalDataProcessor.тСозданиеВыпускаПродукции.Form.Форма</defaultForm>
+  <attributes uuid="cad9edbb-78c3-47eb-bd0e-98c3bcc8c2f6">
+    <name>Период</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период</value>
+    </synonym>
+    <type>
+      <types>StandardPeriod</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="d2cce54b-b590-4ead-ab93-3fcd482a34fb">
+    <producedTypes>
+      <objectType typeId="30d5b8bd-1f9a-4c4a-9cd6-b596df4e65d7" valueTypeId="6caeab51-7116-4f03-a4c5-13deb4725f96"/>
+      <rowType typeId="b113bf98-bf76-41ba-b593-c60cd2039805" valueTypeId="78fd8c4c-8927-47eb-9bdd-414934070962"/>
+    </producedTypes>
+    <name>Продажи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продажи</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="1cd8648b-5548-4a60-bbd4-9bbe1160e036">
+      <name>ДокументПродажи</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ продажи</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ОтчетОРозничныхПродажах</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="9e2e80b4-4a41-4a1c-93d7-34d4a947cc80">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

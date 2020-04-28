@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalReport xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="65b4c48c-2aa9-4a34-a101-58f2b774242d">
+  <producedTypes>
+    <objectType typeId="ad73911b-06c3-4c09-b4ea-716f513188c0" valueTypeId="b24a6257-17d3-4237-b521-732a6ce5ccf9"/>
+  </producedTypes>
+  <name>тПроверкаЗагрузкиПродажСлужбДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверка загрузки продаж служб доставки</value>
+  </synonym>
+  <comment>версия 01.01</comment>
+  <containedObjects classId="e41aff26-25cf-4bb6-b6c1-3f478a75f374" objectId="470bc608-add7-42cf-8e6a-8d097c8ee67b"/>
+  <mainDataCompositionSchema>ExternalReport.тПроверкаЗагрузкиПродажСлужбДоставки.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="dfa1dc5d-c4fb-4661-8faf-1a96c9df32d1">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:ExternalReport>

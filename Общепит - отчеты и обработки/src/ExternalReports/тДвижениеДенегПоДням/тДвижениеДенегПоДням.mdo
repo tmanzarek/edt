@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalReport xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c58a8899-f861-46ba-9174-15dfa233ba06">
+  <producedTypes>
+    <objectType typeId="a4b73013-24cd-4689-903a-7ca082198f09" valueTypeId="ae0225df-cf37-4851-86af-27ed90dccbf3"/>
+  </producedTypes>
+  <name>тДвижениеДенегПоДням</name>
+  <synonym>
+    <key>ru</key>
+    <value>Движение денег по дням</value>
+  </synonym>
+  <comment>версия 01_00</comment>
+  <containedObjects classId="e41aff26-25cf-4bb6-b6c1-3f478a75f374" objectId="249334dd-0978-42f3-8fa0-ebe47447e457"/>
+  <mainDataCompositionSchema>ExternalReport.тДвижениеДенегПоДням.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="afafdee3-120e-4fb3-a44e-a8f759d8d75f">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:ExternalReport>

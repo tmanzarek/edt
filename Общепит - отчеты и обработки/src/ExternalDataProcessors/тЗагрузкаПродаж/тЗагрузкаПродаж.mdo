@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ea13ef97-0f9e-43c6-a1b6-7f799e40609c">
+  <producedTypes>
+    <objectType typeId="ec59f509-e07c-44d7-b115-aeb05fb4f294" valueTypeId="c382100f-d1f3-49ae-b048-85e936702b7e"/>
+  </producedTypes>
+  <name>тЗагрузкаПродаж</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка продаж (Яндекс.Еда, delivery club)</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="a8e9bd66-b4c7-4e61-ad57-31fe29640fa6"/>
+  <defaultForm>ExternalDataProcessor.тЗагрузкаПродаж.Form.Форма</defaultForm>
+  <forms uuid="3d69bdd0-c8aa-414e-a383-8ea54e14c2b6">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

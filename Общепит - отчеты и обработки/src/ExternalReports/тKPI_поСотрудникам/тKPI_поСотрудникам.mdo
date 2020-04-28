@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalReport xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="63c20853-f086-4271-9dc7-1d5e24328d5b">
+  <producedTypes>
+    <objectType typeId="0e015215-eff0-4464-8d5c-69dfd8bee9e3" valueTypeId="e4e14539-fd0e-4bb1-84d5-7f434f85c5ae"/>
+  </producedTypes>
+  <name>тKPI_поСотрудникам</name>
+  <synonym>
+    <key>ru</key>
+    <value>KPI по сотрудникам</value>
+  </synonym>
+  <comment>версия 01.01</comment>
+  <containedObjects classId="e41aff26-25cf-4bb6-b6c1-3f478a75f374" objectId="8b2c9acf-80a4-4f6c-b164-25d1204c3dad"/>
+  <mainDataCompositionSchema>ExternalReport.тKPI_поСотрудникам.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="20b7cc7f-b907-4621-bdd5-90a741754c2b">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:ExternalReport>
