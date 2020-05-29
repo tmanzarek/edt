@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9ef754bc-7b34-421e-ad19-60a496b9c590">
+  <producedTypes>
+    <objectType typeId="dd201fa9-4703-4742-be7e-be1690c3d0c9" valueTypeId="fe341ea8-4222-482e-9ac9-eea041d5e5e7"/>
+  </producedTypes>
+  <name>тУстановитьГалкиВИнвентаризациях</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установить галки в инвентаризациях</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="f1d76f28-d681-41a2-b975-e07ebc451885"/>
+  <defaultForm>ExternalDataProcessor.тУстановитьГалкиВИнвентаризациях.Form.Форма</defaultForm>
+  <attributes uuid="df50eed1-1bd1-4844-86fd-0eba13066db6">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="b7c30660-5154-4f43-bf64-e26935d6ab84">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <forms uuid="0c952a09-078b-4cb6-bb12-cae822352ac3">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

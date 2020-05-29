@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b80242d8-bdbc-4f48-8847-7210ad9072d8">
+  <producedTypes>
+    <objectType typeId="591dd56f-a050-4078-a15c-157a2fc6e736" valueTypeId="15db42a3-b313-421e-bc1d-d11e6728951d"/>
+  </producedTypes>
+  <name>тСозданиеВыпускаПродукцииНаОснованииОтрицательныхОстатковМодификаторовНаСчете43</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создание документов &quot;Выпуск продукции&quot; на основании отрицательных остатков модификаторов на счете 43</value>
+  </synonym>
+  <comment>версия 01.02</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="53d445a0-0ecd-4f64-9701-c6075d8a1256"/>
+  <defaultForm>ExternalDataProcessor.тСозданиеВыпускаПродукцииНаОснованииОтрицательныхОстатковМодификаторовНаСчете43.Form.Форма</defaultForm>
+  <attributes uuid="4c7d3c0d-1947-49ad-a076-2052cbf73b79">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="188dea6f-2d01-4c68-89d7-53f7a3c50197">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <forms uuid="e59dae39-beed-45ad-900a-c3ec06387e26">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>

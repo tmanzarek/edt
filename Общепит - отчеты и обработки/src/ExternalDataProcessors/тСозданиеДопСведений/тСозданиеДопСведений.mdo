@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ee9cf33e-b8ad-4d4d-97fa-d3f200bdd898">
+  <producedTypes>
+    <objectType typeId="99deea2b-550f-4eac-863a-fd95a312f67a" valueTypeId="88405f72-d141-43f3-9d9a-ceb75781625f"/>
+  </producedTypes>
+  <name>тСозданиеДопСведений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создание доп. сведений</value>
+  </synonym>
+  <comment>версия 01.00</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="3d7d9262-cdea-444a-a0fb-92d6ae1e71a9"/>
+  <defaultForm>ExternalDataProcessor.тСозданиеДопСведений.Form.Форма</defaultForm>
+  <attributes uuid="a563c23e-2f2b-4665-b0b6-6574fae546f9">
+    <name>Источник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник</value>
+    </synonym>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</types>
+    </type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="a6ee85ee-7c2c-42d8-a44f-270af2caec2c">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сколько создать доп.сведений</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="c6ded9aa-ae42-4753-a12d-fdbba488547a">
+    <name>МаксимальныйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимальный номер доп. сведений в базе</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="74fc835c-70e9-4bfc-9fcd-ca6f400b85ba">
+    <name>НаборДопРеквизитовИСведений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Набор доп. реквизитов и сведений</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НаборыДополнительныхРеквизитовИСведений</types>
+    </type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <forms uuid="737415be-1bdc-4117-9183-9b90110b537a">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>
