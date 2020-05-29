@@ -8,7 +8,7 @@
     <key>ru</key>
     <value>Загрузка цен, продаж (Сигма, Яндекс.Еда, delivery club) и кассы</value>
   </synonym>
-  <comment>версия 01.04</comment>
+  <comment>версия 01.09</comment>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="a8e9bd66-b4c7-4e61-ad57-31fe29640fa6"/>
   <defaultForm>ExternalDataProcessor.тЗагрузкаЦенПродажКассы.Form.Форма</defaultForm>
   <forms uuid="3d69bdd0-c8aa-414e-a383-8ea54e14c2b6">
