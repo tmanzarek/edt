@@ -8,9 +8,22 @@
     <key>ru</key>
     <value>Распределение затрат</value>
   </synonym>
-  <comment>версия 01.00</comment>
+  <comment>версия 01.01</comment>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="32b3441a-014e-475c-b8e3-f3ab9cfd5bd1"/>
   <defaultForm>ExternalDataProcessor.тРаспределениеЗатрат.Form.Форма</defaultForm>
+  <attributes uuid="6f2d1db8-7e36-48fd-b787-0b5cd1b7e52b">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.АвансовыйОтчет</types>
+      <types>DocumentRef.ОперацияБух</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+      <types>DocumentRef.ТребованиеНакладная</types>
+    </type>
+  </attributes>
   <tabularSections uuid="7363f0b1-216e-439b-95cd-0def7a1b6374">
     <producedTypes>
       <objectType typeId="29c760d7-2bdb-4f9b-87cf-ee153c1c1795" valueTypeId="d0f96b42-bed6-408f-ac20-9062e6676ca4"/>
