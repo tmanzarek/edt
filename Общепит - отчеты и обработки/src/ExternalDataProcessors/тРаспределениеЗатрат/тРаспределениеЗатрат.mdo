@@ -8,7 +8,7 @@
     <key>ru</key>
     <value>Распределение затрат</value>
   </synonym>
-  <comment>версия 01.01</comment>
+  <comment>версия 01.02</comment>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="32b3441a-014e-475c-b8e3-f3ab9cfd5bd1"/>
   <defaultForm>ExternalDataProcessor.тРаспределениеЗатрат.Form.Форма</defaultForm>
   <attributes uuid="6f2d1db8-7e36-48fd-b787-0b5cd1b7e52b">
