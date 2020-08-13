@@ -160,7 +160,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тСоздатьПредопределенныйЭлементСправочника</types>
+      <types>ExternalDataProcessor.тСоздатьПредопределенныйЭлементСправочника</types>
     </valueType>
     <view>
       <common>true</common>

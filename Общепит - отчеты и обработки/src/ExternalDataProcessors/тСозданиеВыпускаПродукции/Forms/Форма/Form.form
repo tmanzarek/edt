@@ -422,7 +422,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тСозданиеВыпускаПродукции</types>
+      <types>ExternalDataProcessor.тСозданиеВыпускаПродукции</types>
     </valueType>
     <view>
       <common>true</common>

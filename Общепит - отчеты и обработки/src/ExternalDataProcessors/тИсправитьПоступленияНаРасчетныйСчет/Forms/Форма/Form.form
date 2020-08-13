@@ -206,7 +206,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тИсправитьПоступленияНаРасчетныйСчет</types>
+      <types>ExternalDataProcessor.тИсправитьПоступленияНаРасчетныйСчет</types>
     </valueType>
     <view>
       <common>true</common>

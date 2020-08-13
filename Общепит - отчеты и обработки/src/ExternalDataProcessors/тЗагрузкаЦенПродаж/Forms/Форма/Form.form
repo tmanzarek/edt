@@ -210,7 +210,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тЗагрузкаЦенПродаж</types>
+      <types>ExternalDataProcessor.тЗагрузкаЦенПродаж</types>
     </valueType>
     <view>
       <common>true</common>

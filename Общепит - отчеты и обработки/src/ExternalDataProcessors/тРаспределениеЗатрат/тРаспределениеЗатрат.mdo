@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e865466-b931-443a-b1cf-75d3d8940143">
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e865466-b931-443a-b1cf-75d3d8940143">
   <producedTypes>
     <objectType typeId="6b068ebd-fda9-4ca0-b2d1-aacec5d81408" valueTypeId="25a33f3e-f15f-48c5-9321-da05c0a4a5bc"/>
   </producedTypes>
@@ -8,8 +8,8 @@
     <key>ru</key>
     <value>Распределение затрат</value>
   </synonym>
-  <comment>версия 01.02</comment>
-  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="32b3441a-014e-475c-b8e3-f3ab9cfd5bd1"/>
+  <comment>версия 01.04</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="c8d3805a-27a3-44d5-a47c-9cf8552cebef"/>
   <defaultForm>ExternalDataProcessor.тРаспределениеЗатрат.Form.Форма</defaultForm>
   <attributes uuid="6f2d1db8-7e36-48fd-b787-0b5cd1b7e52b">
     <name>Документ</name>
@@ -22,7 +22,13 @@
       <types>DocumentRef.ОперацияБух</types>
       <types>DocumentRef.ПоступлениеТоваровУслуг</types>
       <types>DocumentRef.ТребованиеНакладная</types>
+      <types>DocumentRef.ПоступлениеНаРасчетныйСчет</types>
+      <types>DocumentRef.ПриходныйКассовыйОрдер</types>
+      <types>DocumentRef.РасходныйКассовыйОрдер</types>
+      <types>DocumentRef.СписаниеСРасчетногоСчета</types>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <tabularSections uuid="7363f0b1-216e-439b-95cd-0def7a1b6374">
     <producedTypes>
@@ -34,6 +40,14 @@
       <key>ru</key>
       <value>Распределенные затраты</value>
     </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
     <attributes uuid="b53f40a7-c727-4fb5-8001-74e09fdf69fe">
       <name>Склад</name>
       <synonym>
@@ -43,6 +57,9 @@
       <type>
         <types>CatalogRef.Склады</types>
       </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="23e24ea1-f16c-4c9d-845d-753345bab340">
       <name>СтатьяЗатрат</name>
@@ -53,6 +70,9 @@
       <type>
         <types>CatalogRef.СтатьиЗатрат</types>
       </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="2d4120fd-0300-4dda-9036-7fc59720d472">
       <name>Сумма</name>
@@ -68,6 +88,9 @@
           <nonNegative>true</nonNegative>
         </numberQualifiers>
       </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
   </tabularSections>
   <forms uuid="e8e894e7-2bc1-4516-8ff1-46f9e90d5bdf">

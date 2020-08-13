@@ -8,7 +8,7 @@
     <key>ru</key>
     <value>Исправить требования-накладные</value>
   </synonym>
-  <comment>версия 01.01</comment>
+  <comment>версия 01.02</comment>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="d0e75843-b80a-4e25-b907-9d6acc6c6e8c"/>
   <defaultForm>ExternalDataProcessor.тИсправитьТребованияНакладные.Form.Форма</defaultForm>
   <attributes uuid="e9d0504d-97dd-4f22-9654-f6f4679f6500">

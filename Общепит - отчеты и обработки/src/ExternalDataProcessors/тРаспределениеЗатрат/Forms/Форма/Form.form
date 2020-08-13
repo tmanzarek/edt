@@ -8,8 +8,10 @@
     <userVisible>
       <common>true</common>
     </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>Объект.Документ</segments>
+    <dataPath xsi:type="form:MultiLanguageDataPath">
+      <paths xsi:type="form:DataPath">
+        <segments>Объект.Документ</segments>
+      </paths>
     </dataPath>
     <extendedTooltip>
       <name>ДокументРасширеннаяПодсказка</name>
@@ -37,7 +39,6 @@
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
-    <readOnly>true</readOnly>
     <editMode>Enter</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -78,9 +79,6 @@
         <dataPath xsi:type="form:MultiLanguageDataPath">
           <paths xsi:type="form:DataPath">
             <segments>Склады.Description</segments>
-          </paths>
-          <paths xsi:type="form:DataPath">
-            <segments>Склады.Наименование</segments>
           </paths>
         </dataPath>
         <extendedTooltip>
@@ -293,6 +291,11 @@
       <fileDragMode>AsFileRef</fileDragMode>
       <extInfo xsi:type="form:DynamicListTableExtInfo">
         <autoRefreshPeriod>60</autoRefreshPeriod>
+        <period>
+          <startDate>0001-01-01T00:00:00</startDate>
+          <endDate>0001-01-01T00:00:00</endDate>
+        </period>
+        <topLevelParent xsi:type="core:UndefinedValue"/>
         <showRoot>true</showRoot>
       </extInfo>
     </items>
@@ -319,9 +322,6 @@
         <dataPath xsi:type="form:MultiLanguageDataPath">
           <paths xsi:type="form:DataPath">
             <segments>СтатьиЗатрат.Description</segments>
-          </paths>
-          <paths xsi:type="form:DataPath">
-            <segments>СтатьиЗатрат.Наименование</segments>
           </paths>
         </dataPath>
         <extendedTooltip>
@@ -534,6 +534,11 @@
       <fileDragMode>AsFileRef</fileDragMode>
       <extInfo xsi:type="form:DynamicListTableExtInfo">
         <autoRefreshPeriod>60</autoRefreshPeriod>
+        <period>
+          <startDate>0001-01-01T00:00:00</startDate>
+          <endDate>0001-01-01T00:00:00</endDate>
+        </period>
+        <topLevelParent xsi:type="core:UndefinedValue"/>
         <showRoot>true</showRoot>
       </extInfo>
     </items>
@@ -595,9 +600,6 @@
         <paths xsi:type="form:DataPath">
           <segments>Объект.РаспределенныеЗатраты.LineNumber</segments>
         </paths>
-        <paths xsi:type="form:DataPath">
-          <segments>Объект.РаспределенныеЗатраты.НомерСтроки</segments>
-        </paths>
       </dataPath>
       <extendedTooltip>
         <name>РаспределенныеЗатратыНомерСтрокиРасширеннаяПодсказка</name>
@@ -647,9 +649,6 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:MultiLanguageDataPath">
-        <paths xsi:type="form:DataPath">
-          <segments>Объект.РаспределенныеЗатраты.Склад</segments>
-        </paths>
         <paths xsi:type="form:DataPath">
           <segments>Объект.РаспределенныеЗатраты.Склад</segments>
         </paths>
@@ -705,9 +704,6 @@
         <paths xsi:type="form:DataPath">
           <segments>Объект.РаспределенныеЗатраты.СтатьяЗатрат</segments>
         </paths>
-        <paths xsi:type="form:DataPath">
-          <segments>Объект.РаспределенныеЗатраты.СтатьяЗатрат</segments>
-        </paths>
       </dataPath>
       <extendedTooltip>
         <name>РаспределенныеЗатратыСтатьяЗатратРасширеннаяПодсказка</name>
@@ -760,9 +756,6 @@
         <paths xsi:type="form:DataPath">
           <segments>Объект.РаспределенныеЗатраты.Сумма</segments>
         </paths>
-        <paths xsi:type="form:DataPath">
-          <segments>Объект.РаспределенныеЗатраты.Сумма</segments>
-        </paths>
       </dataPath>
       <extendedTooltip>
         <name>РаспределенныеЗатратыСуммаРасширеннаяПодсказка</name>
@@ -794,9 +787,6 @@
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <footerDataPath xsi:type="form:DataPath">
-        <segments>Объект.РаспределенныеЗатраты.TotalСумма</segments>
-      </footerDataPath>
       <extInfo xsi:type="form:InputFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -994,7 +984,6 @@
     <selectionMode>MultiRow</selectionMode>
     <header>true</header>
     <headerHeight>1</headerHeight>
-    <footer>true</footer>
     <footerHeight>1</footerHeight>
     <horizontalScrollBar>AutoUse</horizontalScrollBar>
     <verticalScrollBar>AutoUse</verticalScrollBar>
@@ -1074,6 +1063,7 @@
     <items xsi:type="form:Button">
       <name>ФормаПолучитьЗатраты</name>
       <id>106</id>
+      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -1152,7 +1142,7 @@
       <common>true</common>
     </edit>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>Склады.Ссылка</segments>
+      <segments>Склады.Ref</segments>
     </notDefaultUseAlwaysAttributes>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <mainTable>Catalog.Склады</mainTable>
@@ -1179,7 +1169,7 @@
       <common>true</common>
     </edit>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>СтатьиЗатрат.Ссылка</segments>
+      <segments>СтатьиЗатрат.Ref</segments>
     </notDefaultUseAlwaysAttributes>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <mainTable>Catalog.СтатьиЗатрат</mainTable>
@@ -1295,5 +1285,4 @@
     <navigationPanel/>
     <commandBar/>
   </commandInterface>
-  <extInfo xsi:type="form:ObjectFormExtInfo"/>
 </form:Form>

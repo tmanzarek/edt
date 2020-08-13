@@ -107,7 +107,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тСозданиеСписанияМатериалов</types>
+      <types>ExternalDataProcessor.тСозданиеСписанияМатериалов</types>
     </valueType>
     <view>
       <common>true</common>

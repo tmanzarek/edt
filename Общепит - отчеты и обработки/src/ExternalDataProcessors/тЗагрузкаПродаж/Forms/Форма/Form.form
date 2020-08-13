@@ -192,7 +192,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тЗагрузкаПродаж</types>
+      <types>ExternalDataProcessor.тЗагрузкаПродаж</types>
     </valueType>
     <view>
       <common>true</common>

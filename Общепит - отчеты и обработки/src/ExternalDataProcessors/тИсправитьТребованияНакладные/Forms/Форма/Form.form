@@ -211,7 +211,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тИсправитьТребованияНакладные</types>
+      <types>ExternalDataProcessor.тИсправитьТребованияНакладные</types>
     </valueType>
     <view>
       <common>true</common>

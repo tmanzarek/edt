@@ -389,7 +389,7 @@
     <name>Объект</name>
     <id>1</id>
     <valueType>
-      <types>ExternalDataProcessorObject.тДозаполнитьОприходованияТоваров</types>
+      <types>ExternalDataProcessor.тДозаполнитьОприходованияТоваров</types>
     </valueType>
     <view>
       <common>true</common>
